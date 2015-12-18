@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="83eb22956f5d45e48459663666313781" Name="Diagram1" ZoomLevel="95">
+        <EntityTypeShape EntityType="PrviiModel.ChannelMedia" Width="1.5" PointX="3" PointY="0.75" />
+        <EntityTypeShape EntityType="PrviiModel.ChannelMessageAttachment" Width="1.5" PointX="13.5" PointY="7.75" />
+        <EntityTypeShape EntityType="PrviiModel.ChannelSubscriber" Width="2.625" PointX="9.5" PointY="10.5" />
+        <EntityTypeShape EntityType="PrviiModel.Country" Width="1.5" PointX="3.75" PointY="11.625" />
+        <EntityTypeShape EntityType="PrviiModel.GroupChannel" Width="1.5" PointX="3" PointY="7.875" />
+        <EntityTypeShape EntityType="PrviiModel.Group" Width="1.5" PointX="1.125" PointY="2.625" />
+        <EntityTypeShape EntityType="PrviiModel.State" Width="1.5" PointX="3.75" PointY="4.25" />
+        <EntityTypeShape EntityType="PrviiModel.UserProfile" Width="1.5" PointX="6" PointY="6" />
+        <EntityTypeShape EntityType="PrviiModel.UserRole" Width="1.5" PointX="8.25" PointY="13.375" />
+        <AssociationConnector Association="PrviiModel.FK_ChannelMessageAttachments_ChannelMedias" />
+        <AssociationConnector Association="PrviiModel.FK_ChannelSubscribers_UserProfiles" />
+        <AssociationConnector Association="PrviiModel.FK_States_Countries" />
+        <AssociationConnector Association="PrviiModel.FK_UserProfiles_Countries" />
+        <AssociationConnector Association="PrviiModel.FK_GroupChannels_Groups" />
+        <AssociationConnector Association="PrviiModel.FK_UserProfiles_Groups" />
+        <AssociationConnector Association="PrviiModel.FK_UserProfiles_States" />
+        <AssociationConnector Association="PrviiModel.FK_UserRoles_UserProfiles" />
+        <EntityTypeShape EntityType="PrviiModel.ShoppingCart" Width="1.5" PointX="8.25" PointY="6.625" />
+        <AssociationConnector Association="PrviiModel.FK_ShoppingCarts_UserProfiles" />
+        <EntityTypeShape EntityType="PrviiModel.ChannelMessage" Width="1.5" PointX="3" PointY="15" />
+        <AssociationConnector Association="PrviiModel.FK_ChannelMessageAttachments_ChannelMessages" />
+        <EntityTypeShape EntityType="PrviiModel.ShoppingCartItem" Width="1.5" PointX="10.5" PointY="3.5" />
+        <AssociationConnector Association="PrviiModel.FK_ShoppingCartItems_ShoppingCarts" />
+        <EntityTypeShape EntityType="PrviiModel.PaymentRecon" Width="1.5" PointX="6.375" PointY="0.75" />
+        <EntityTypeShape EntityType="PrviiModel.ChannelSubscriberMessage" Width="1.5" PointX="12.875" PointY="12.875" />
+        <AssociationConnector Association="PrviiModel.FK_ChannelSubscriberMessages_ChannelMessages" />
+        <AssociationConnector Association="PrviiModel.FK_ChannelSubscriberMessages_ChannelSubscribers" />
+        <EntityTypeShape EntityType="PrviiModel.Channel" Width="1.5" PointX="0.75" PointY="7.75" />
+        <AssociationConnector Association="PrviiModel.FK_ChannelMedias_Channels" />
+        <AssociationConnector Association="PrviiModel.FK_ChannelMessages_Channels" />
+        <AssociationConnector Association="PrviiModel.FK_ChannelSubscribers_Channels" />
+        <AssociationConnector Association="PrviiModel.FK_GroupChannels_Channels" />
+        <AssociationConnector Association="PrviiModel.FK_ShoppingCartItems_Channels" />
+        <EntityTypeShape EntityType="PrviiModel.PrviiAccountMaster" Width="1.5" PointX="8.375" PointY="0.75" />
+        <EntityTypeShape EntityType="PrviiModel.PrviiChannelAccounting" Width="1.5" PointX="10.625" PointY="0.75" />
+        <EntityTypeShape EntityType="PrviiModel.PrviiTransaction" Width="1.5" PointX="5.375" PointY="15.125" />
+        <AssociationConnector Association="PrviiModel.FK_PrviiChannelAccounting_Channels" />
+        <AssociationConnector Association="PrviiModel.FK_PrviiChannelAccounting_PrviiAccountMaster" />
+        <EntityTypeShape EntityType="PrviiModel.UserDeviceInfo" Width="1.5" PointX="8.25" PointY="16.5" />
+        <AssociationConnector Association="PrviiModel.FK_UserDeviceInfo_UserProfiles" />
+        <EntityTypeShape EntityType="PrviiModel.IosTransactionLog" Width="1.5" PointX="12.75" PointY="4.875" />
+        <EntityTypeShape EntityType="PrviiModel.TransactionReconDetail" Width="1.5" PointX="15.375" PointY="0.75" />
+        <AssociationConnector Association="PrviiModel.FK_IosTransactionLog_ShoppingCartItems" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

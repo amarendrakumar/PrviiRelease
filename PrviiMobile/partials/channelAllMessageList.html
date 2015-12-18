@@ -1,0 +1,79 @@
+﻿<!--<div ng-controller="channelMessageReviewController">
+    <table>
+        <tr>
+            <th><a href="" ng-click="predicate = 'Subject'; reverse=!reverse">Subject</a></th>
+            <th><a href="" ng-click="predicate = 'ScheduledOn'; reverse=!reverse">ScheduledOn</a></th>          
+            <th><a href="" ng-click="predicate = 'Status'; reverse=!reverse"> Email Status</a></th>
+            <th><a href="" ng-click="predicate = 'SMSStatus'; reverse=!reverse">SMS Status</a></th>
+            <th><a href="" ng-click="predicate = 'SentOn'; reverse=!reverse">Sent On</a></th>
+            <th><a href="" ng-click="predicate = 'TimeZoneID'; reverse=!reverse">TimeZoneID</a></th>
+            <th></th>
+        </tr>
+        <tr ng-repeat="channelMessage in channelMessageList | orderBy: predicate : reverse">
+            <td>{{channelMessage.Subject}}</td>
+            <td> <div ng-show="channelMessage.IsEmail"> {{channelMessage.Subject}} </div> <div ng-show="!channelMessage.IsEmail"> {{channelMessage.Message | limitTo: 20}} </div> </td>
+            <td>{{channelMessage.ScheduledOn | date: 'YYYY-MM-dd : h:mm:ss a'}}</td>
+            <td>
+                <div ng-show="channelMessage.Status ==0">NA</div>
+                <div ng-show="channelMessage.Status ==1">Created</div>
+                <div ng-show="channelMessage.Status ==2">Sent</div>
+                <div ng-show="channelMessage.Status ==3">Approved</div>
+                <div ng-show="channelMessage.Status ==4">Sending</div>
+            </td>
+            <td>
+                <div ng-show="channelMessage.SMSStatus ==0">NA</div>
+                <div ng-show="channelMessage.SMSStatus ==1">Queued</div>
+                <div ng-show="channelMessage.SMSStatus ==2">Sending</div>
+                <div ng-show="channelMessage.SMSStatus ==3">Sent</div>
+                <div ng-show="channelMessage.SMSStatus ==4">Failed</div>
+                <div ng-show="channelMessage.SMSStatus ==5">Created</div>
+                <div ng-show="channelMessage.SMSStatus ==6">Approved</div>
+            </td>
+           <td>{{channelMessage.SentOn | date: 'YYYY-MM-dd : h:mm:ss a'}}</td>
+            <td>{{channelMessage.TimeZoneID}}</td>
+            <td>
+                <a ng-click="includeChannelMessageAllView('channelMessageView.html', channelMessage.ID)">View</a>
+                
+                <a href="#/channelMessageView/{{channelMessage.ID}}">View</a>
+            </td>
+        </tr>
+    </table>
+
+</div>-->
+
+<!-- Row-->
+<div class="row" ng-controller="channelMessageReviewController" >
+    <div class="" style="padding:0 2px;">
+        <table class="table-responsive">
+            <tr>
+                <th><a href="" ng-click="predicate = 'Subject'; reverse=!reverse">Subject</a></th>
+                <th><a href="" ng-click="predicate = 'Status'; reverse=!reverse"> Email Status</a></th>
+                <th><a href="" ng-click="predicate = 'SMSStatus'; reverse=!reverse">SMS Status</a></th>
+                <th><a href="" ng-click="predicate = 'SentOn'; reverse=!reverse">Sent On</a></th>
+                <th></th>
+            </tr>
+            <tr ng-repeat="channelMessage in channelMessageList | orderBy: predicate : reverse">
+                <td><div ng-show="channelMessage.IsEmail"> {{channelMessage.Subject}} </div> <div ng-show="!channelMessage.IsEmail"> {{channelMessage.Message | limitTo: 20}} </div></td>
+                <td>
+                    <div ng-show="channelMessage.Status ==0">NA</div>
+                    <div ng-show="channelMessage.Status ==1">Created</div>
+                    <div ng-show="channelMessage.Status ==2">Sent</div>
+                    <div ng-show="channelMessage.Status ==3">Approved</div>
+                    <div ng-show="channelMessage.Status ==4">Sending</div>
+                </td>
+                <td>
+                    <div ng-show="channelMessage.SMSStatus ==0">NA</div>
+                    <div ng-show="channelMessage.SMSStatus ==1">Queued</div>
+                    <div ng-show="channelMessage.SMSStatus ==2">Sending</div>
+                    <div ng-show="channelMessage.SMSStatus ==3">Sent</div>
+                    <div ng-show="channelMessage.SMSStatus ==4">Failed</div>
+                    <div ng-show="channelMessage.SMSStatus ==5">Created</div>
+                    <div ng-show="channelMessage.SMSStatus ==6">Approved</div>
+                </td>
+                <td>{{channelMessage.SentOn | date: 'YYYY-MM-dd : h:mm:ss a'}}</td>
+                <td><a ng-click="includeChannelMessageAllView('channelMessageView.html', channelMessage.ID)">View</a></td>
+            </tr>
+        </table>
+    </div>
+
+</div>

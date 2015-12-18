@@ -1,0 +1,106 @@
+﻿<div ng-include="'partials/header.html'"></div>
+<div class="intro" >
+    <div class="after-login">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="main-tabs">
+                        <div class="col-md-12">                            
+                            <div class="slideBody sub-tabs" >                                
+                                <div class="slideSubHead"> Shopping Cart Item</div>
+                                <div class="slideSubBody" >
+                                    <div ng-controller="shoppingCartController">
+                                        <div class="row" ng-repeat="item in shoppingCartList">
+                                            <div class="col-sm-3">
+                                                <div class="celebrity-img">
+                                                    <a ng-click="includeSubscriberChannelFullDetails('subscriberchannelFullDetails.html',item.ChannelID)"> <img ng-src="{{SERVICE_URL}}channel/GetMedia?channelID={{item.ChannelID}}&mediaTypeID=1"></a>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="celebrity-name">
+                                                    <a ng-click="includeSubscriberChannelFullDetails('subscriberchannelFullDetails.html',item.ChannelID)">{{item.ChannelName}} </a>
+
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div>
+                                                 Price : {{item.Price | currency }}
+
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <input type="checkbox"
+                                                       name="selectedUsers[]"
+                                                       value="{{item.ID}}"
+                                                       ng-checked="selection.indexOf(item.ID) > -1"
+                                                       ng-click="toggleSelection(item.ID)">
+                                                <input type="hidden" ng-model="shoppingCartID" value="{{item.ShoppingCartID}}">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12" style="text-align:right;"><b> Total Price : $ {{TotalPrice}} &nbsp;&nbsp; </b> </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12"><button type="button" class="btnsaveNew" ng-click="Checkout(ShoppingCartID,TotalPrice)">Checkout</button> &nbsp;
+                                                <button type="button" ng-click="ShoppingContinue()" class="btnsaveNew">
+                                                    Shopping Continue
+                                                </button>&nbsp;
+
+                                                    <button type="button" class="btnsaveNew" ng-click="RemoveItem()">Update</button>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            &nbsp;&nbsp;
+                                        </div>
+                                        </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--<div class="link"> Shopping Cart Item</div>
+    <div>
+        <table>
+            <tr ng-repeat="item in shoppingCartList">
+                <td class="image">
+                    <a ng-click="includeSubscriberChannelFullDetails('subscriberchannelFullDetails.html',item.ChannelID)"> <img ng-src="{{SERVICE_URL}}channel/GetMedia?channelID={{item.ChannelID}}&mediaTypeID=1" /></a>
+                </td>
+                <td>
+                    <a ng-click="includeSubscriberChannelFullDetails('subscriberchannelFullDetails.html',item.ChannelID)">{{item.ChannelName}} </a>
+                </td>
+                <td style="width:20%;">{{item.Price | currency}}</td>
+                <td>
+
+                    <input type="checkbox"
+                           name="selectedUsers[]"
+                           value="{{item.ID}}"
+                           ng-checked="selection.indexOf(item.ID) > -1"
+                           ng-click="toggleSelection(item.ID)">
+                    <input type="hidden" ng-model="shoppingCartID" value="{{item.ShoppingCartID}}"></td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align:right;" ><b> Total Price : $ {{TotalPrice}} &nbsp;&nbsp; </b></td>
+            </tr>
+            <tr>
+                <td colspan ="2">
+                   <button type="button" class="btnsaveNew" ng-click="Go(ShoppingCartID,'Globrin',TotalPrice)" ng-hide="true">Checkout</button>
+                    <a ng-click="GoFuture(ShoppingCartID,'Globrin',TotalPrice)" ng-hide="true">Future Payment</a>
+                    <button type="button" class="btnsaveNew" ng-click="Checkout(ShoppingCartID,TotalPrice)">Checkout</button>
+                    <a ng-click="ShoppingContinue()" class="btnsaveNew" >Shopping Continue</a>
+
+                </td>
+
+                <td colspan="2"> <button type="button" class="btnsaveNew" ng-click="RemoveItem()">Update</button> </td>
+            </tr>
+        </table>
+    </div>
+    <div class="link"></div>-->
+</div>

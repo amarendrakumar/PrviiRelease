@@ -1,0 +1,42 @@
+﻿
+<div  class="row" ng-controller="channelMessageListController">
+    <div class="" style="padding:0 2px;">
+        <table class="table-responsive">
+            <tr>
+                <th> <a href="" ng-click="predicate = 'Subject'; reverse=!reverse">Subject</a> </th>
+                <th><a href="" ng-click="predicate = 'ScheduledOn'; reverse=!reverse">ScheduledOn</a></th>
+                <!--<th><a href="" ng-click="predicate = 'TimeZoneID'; reverse=!reverse">TimeZoneID</a></th>-->
+                <th><a href="" ng-click="predicate = 'Status'; reverse=!reverse">Email Status</a></th>
+                <th><a href="" ng-click="predicate = 'SMSStatus'; reverse=!reverse">SMS Status</a></th>
+                <th></th>
+            </tr>
+            <tr ng-repeat="channelMessage in channelMessageList | filter: myFilter |orderBy: predicate:reverse" ng-init="messageID=channelMessage.ID">
+                <td> <div ng-show="channelMessage.IsEmail"> {{channelMessage.Subject}} </div> <div ng-show="!channelMessage.IsEmail"> {{channelMessage.Message | limitTo: 20}} </div> </td>
+                <td>{{channelMessage.ScheduledOn | date: 'YYYY-MM-dd : HH:MN'}}</td>
+                <!--<td>{{channelMessage.TimeZoneID}}</td>-->
+                <td>
+                    <div ng-show="
+                    <div ng-show=" channelmessage.status= =0">NA</div>
+                    <div ng-show="channelMessage.Status ==1">Created</div>
+                    <div ng-show="channelMessage.Status ==2">Sent</div>
+                    <div ng-show="channelMessage.Status ==3">Approved</div>
+                    <div ng-show="channelMessage.Status ==4">Sending</div>
+                </td>
+                <td>
+                    <div ng-show="channelMessage.SMSStatus ==0">NA</div>
+                    <div ng-show="channelMessage.SMSStatus ==1">Queued</div>
+                    <div ng-show="channelMessage.SMSStatus ==2">Sending</div>
+                    <div ng-show="channelMessage.SMSStatus ==3">Sent</div>
+                    <div ng-show="channelMessage.SMSStatus ==4">Failed</div>
+                    <div ng-show="channelMessage.SMSStatus ==5">Created</div>
+                    <div ng-show="channelMessage.SMSStatus ==6">Approved</div>
+                </td>
+                <td>
+                    <!--<a href="#/channelMessageView/{{channelMessage.ID}}">View</a>
+                <a href="#/channelMessageEdit/{{channelMessage.ID}}">Edit</a>-->
+                    <a ng-click="includeModifyApprove('messageEditReview.html',channelMessage.ID)"> View</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </div>

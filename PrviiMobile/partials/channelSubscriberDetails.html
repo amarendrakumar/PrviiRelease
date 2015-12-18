@@ -1,0 +1,20 @@
+﻿<!--<div ng-include="'partials/header.html'"></div>-->
+<div ng-controller="channelSubscriberDetailsController" class="row">
+    <div class="" style="padding:0 2px;">
+        Subscriber Details
+        <table class="table-responsive">
+            <tr><td><b>First Name :</b> {{SubscriberDetails.Firstname}}  </td></tr>
+            <tr><td><b>Last Name :</b> {{SubscriberDetails.Lastname}}</td></tr>
+            <tr><td><b>Email :</b> {{SubscriberDetails.Email}}</td></tr>
+            <tr><td><b>Telephone :</b> {{SubscriberDetails.Telephone}}</td></tr>
+            <tr><td><b>Mobile : </b>{{SubscriberDetails.Mobile}}</td></tr>
+
+            <tr>
+                <td>
+                    <button type="button" class="btnsave" ng-click="IncludeChannelSubcriberBack('channelsubscriberlist.html')">Back</button>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+</div>

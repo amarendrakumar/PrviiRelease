@@ -1,0 +1,33 @@
+﻿<div ng-include="'partials/header.html'"></div>-->
+
+
+<div class="row" ng-controller="subscriberChannelMessageviewController">
+    <div class="col-md-12 mainHead">
+        <div class="slideHead" ng-click="includeSubscriberChannelFullDetailsMessage('subscriberchannelFullDetailsSubscribe.html',channelviewFull)">View</div>
+        <div class="slideBody" ng-show="channelviewFull" ng-include="srcChennalViewFull"></div>
+    </div>
+
+    <div class="col-md-12 mainHead">
+        <div class="slideHead" ng-click="includeMessage(subscribermessage)">Messages</div>
+        <div class="slideBody sub-tabs" ng-show="subscribermessage" >
+            <div class="slideSubHead sunHead" ng-click="includeSubscriberMessagePastWeek('channelSubscriberPastMessageList.html',messagePastWeek)">Past Weeks</div>
+            <div class="slideSubBody" ng-show="messagePastWeek" ng-include="srcSubscriberMessagePastWeek">
+
+            </div>
+
+            <div class="slideSubHead sunHead" ng-click="includeViewAllMessage('channelSubscriberAllMessageList.html',viewAllMessage)">All</div>
+            <div class="slideSubBody" ng-show="viewAllMessage" ng-include="srcviewAllMessage">
+            </div>
+            <div class="slideSubHead sunHead" ng-click="includeSubscriberMessageSearch('channelSubscriberMessageList.html',MessageSearch)">Search</div>
+            <div class="slideSubBody" ng-show="MessageSearch" ng-include="srcSubscriberMessageSearch">
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-12 mainHead">
+        <div class="slideHead">{{channelDetails.Name}}</div>
+        <img ng-src="{{SERVICE_URL}}channel/GetMedia?channelID={{channelDetails.ID}}&mediaTypeID=1" style="width:98%;" />
+    </div>
+</div>

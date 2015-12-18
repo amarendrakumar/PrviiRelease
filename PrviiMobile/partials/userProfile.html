@@ -1,0 +1,187 @@
+﻿<div ng-include="'partials/header.html'"></div>
+<!--<div ng-controller="userProfileController">
+    <div class="link">Account Setting </div>
+    <table>
+        <tr><td><b>Nick Name :</b> {{userDetails.NickName}}  </td></tr>
+        <tr><td><b>First Name :</b> {{userDetails.Firstname}}  </td></tr>
+        <tr><td><b>Last Name :</b> {{userDetails.Lastname}}</td></tr>
+        <tr><td><b>Email :</b> {{userDetails.Email}}</td></tr>
+        <tr><td><b>Telephone :</b> {{userDetails.Telephone}}</td></tr>
+        <tr><td><b>Mobile : </b>{{userDetails.Mobile}}</td></tr>
+        <tr><td><b>Country : </b>{{userDetails.Country}}</td></tr>
+        <tr><td><b>State : </b>{{userDetails.State}}</td></tr>
+        <tr><td><b>City : </b>{{userDetails.City}}</td></tr>
+        <tr><td><b>Zip Code : </b>{{userDetails.ZipCode}}</td></tr>
+        <tr><td><b>Address1 : </b>{{userDetails.Address1}}</td></tr>
+        <tr><td><b>Address2 : </b>{{userDetails.Address2}}</td></tr>
+                   <tr><td></td></tr>
+</table>
+    <div class="link"><a href="#/editProfile">Account Edit</a> </div>
+</div>-->
+
+<!-- Intro Header -->
+<div class="intro" ng-controller="userProfileController">
+    <div class="after-login">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            <h3>Account Setting</h3>
+                            <div class="setting-table">
+                                <div>
+
+                                    <!-- Row-->
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="setting-label">Nick Name</div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="setting-field">{{userDetails.NickName}}</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Row-->
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="setting-label">First Name</div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="setting-field">{{userDetails.Firstname}}</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Row-->
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="setting-label">Last Name</div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="setting-field">{{userDetails.Lastname}}</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Row-->
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="setting-label">Email</div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="setting-field">{{userDetails.Email}}</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Row-->
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="setting-label">Telephone</div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="setting-field">{{userDetails.Telephone}}</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Row-->
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="setting-label">Mobile</div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="setting-field">{{userDetails.Mobile}}</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Row-->
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="setting-label">Country</div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="setting-field">{{userDetails.Country}}</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Row-->
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="setting-label">State</div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="setting-field">{{userDetails.State}}</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Row-->
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="setting-label">City</div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="setting-field">{{userDetails.City}}</div>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Row-->
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="setting-label">Zip Code</div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="setting-field">{{userDetails.ZipCode}}</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Row-->
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="setting-label">Address1</div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="setting-field">{{userDetails.Address1}}</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Row-->
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="setting-label">Address2</div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="setting-field">{{userDetails.Address2}}</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row cart-buttons">
+                                        <div class="col-xs-4">
+                                        </div>
+
+                                        <div class="col-xs-8 text-right">
+                                            <a href="#/editProfile">
+                                                <input type="button" class="btn btn-default" value="Account Edit" /></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

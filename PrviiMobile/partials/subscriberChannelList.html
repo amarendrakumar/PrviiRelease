@@ -1,0 +1,23 @@
+﻿
+<div ng-controller="subscriberChannelListController">  
+   <div class="row" ng-repeat="channel in channelList">
+        <div class="col-sm-6">
+            <div class="celebrity-img">
+                <a ng-click="includeSubscriberchannelMessage('subscriberChannelMessage.html',channel.ID)"> 
+                <img ng-src="{{SERVICE_URL}}channel//GetMedia?channelID={{channel.ID}}&mediaTypeID=1" />
+                </a>           
+            <div class="clearfix"></div></div>
+        </div>
+        <div class="col-sm-3">
+            <div class="celebrity-name">
+                <a ng-click="includeSubscriberchannelMessage('subscriberChannelMessage.html',channel.ID)"> {{channel.Name}}</a>
+            </div>
+        </div>
+        <!--<div class="col-sm-3">            
+            <button class="unsubscribe-btn" ng-click="UnSubscribe(channel.ID)">UnSubscribe</button>
+        </div>-->
+        <div class="col-sm-3">
+        </div>
+    </div>
+   
+</div>

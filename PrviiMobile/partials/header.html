@@ -1,0 +1,78 @@
+﻿<!--<div ng-controller="headerController">
+    <div id="logo">
+        <a ng-click="Home()" title="Prvii" ng-hide="!Authenticate"> <img ng-src="images/logo.png" alt="Prvii" /></a>
+        <a href="#/logout" title="Prvii" ng-hide="Authenticate"> <img ng-src="images/logo.png" alt="Prvii" /></a>
+    </div>
+    <div class="samp">CELEBRITY SERVICES</div>
+
+    <div class="menu">
+      
+        <a ng-hide="!Authenticate" ng-click="showmenu(menu)">
+            <img src="images/icon.png" />
+            <div id="DivToolTipContent" ng-show="menu">
+                <div class="view-tooltip">
+                    <ul class="tooltip_list">
+                        <li><a ng-click="Home()">Home</a></li>
+                        <li ng-show="IsSubscriber"><a href="#/cart">Cart</a></li>
+                        <li><a href="#/ViewProfile">Settings</a></li>
+                        <li><a href="#/changePassword">Change Password</a></li>
+                        <li><a href="#/logout">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </a>      
+    </div>
+    
+    <h3 ng-hide="Authenticate">
+        Welcome to Prvii
+    </h3>
+    <h3 ng-hide="!Authenticate" >
+    Welcome to Prvii  - <samp ng-hide="IsCelebrityUser">{{Full_NAME}} </samp> <samp ng-hide="!IsCelebrityUser">{{USER_ChannelName}} </samp>
+    </h3>
+</div>-->
+
+
+<header >
+    <!-- Navigation -->
+    <div ng-controller="headerController">
+        <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand page-scroll" ng-click="Home()">
+                        <img src="image/logo.png" />
+                    </a>
+                </div>
+
+                <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="hidden">
+                            <a href="#page-top"></a>
+                        </li>
+                        <li>
+                            <a ng-click="Home()" >Home</a>
+                        </li>
+                        <li ng-show="IsSubscriber">
+                            <a href="#/cart" >Cart</a>
+                        </li>
+                        <li>
+                            <a ng-click="ViewProfile()" >Setting</a>
+                        </li>
+                        <li>
+                            <a ng-click="changePassword()">Change Password</a>
+                        </li>
+                        <li>
+                            <a ng-click="logout()">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <h1 class="brand-heading text-center">
+            <p class="welcome">Welcome to Prvii<br /><span ng-hide="IsCelebrityUser">{{Full_NAME}} </span> <span ng-hide="!IsCelebrityUser">{{USER_ChannelName}} </span></p>
+        </h1>
+    </div>
+</header>

@@ -1,0 +1,274 @@
+﻿<!--<div ng-controller="messageEditReviewController">
+    <div class="link">
+        Message Details
+    </div>
+
+    <table class="CreateMessage">
+        <tr>
+            <td>
+                <b>&nbsp;Send Message To </b><samp class="red">*</samp> <br />
+                &nbsp;  <input name="ToAllUser" type="radio" ng-model="AllSubscribers" ng-value="true" ng-click="" required disabled /> All Subscribers
+                &nbsp; <input name="SelectedUser" type="radio" ng-model="AllSubscribers" ng-value="false" ng-click="" required disabled />Select Subscribers
+                <br />
+                <b ng-hide="AllSubscribers">&nbsp;Select Users</b><br />
+                <div>
+                    <label ng-hide="AllSubscribers" ng-repeat="subscriber in SubscriberList">
+                        <input type="checkbox"
+                               name="selectedUsers[]"
+                               value="{{subscriber.ID}}"
+                               ng-checked="selectedUsers.indexOf(subscriber.ID) > -1"
+                               ng-click="toggleSelection(subscriber.ID)"> {{subscriber.Name}}
+                    </label>
+                </div>
+            </td>
+        </tr>
+        <tr><td>&nbsp;Send message by<samp class="red">*</samp> </td></tr>
+        <tr>
+            <td>
+                <input type="checkbox" ng-model="IsSMS" name="sms" ng-required="!someSelected()" disabled>SMS &nbsp;
+                <input type="checkbox" ng-model="IsEmail" name="email" ng-required="!someSelected()" disabled>Email
+
+            </td>
+        </tr>
+        <tr><td>&nbsp;Subject<samp class="red">*</samp></td></tr>
+        <tr>
+            <td>
+                <input name="subject" type="text" ng-model="Subject" maxlength="500" required disabled />
+            </td>
+        </tr>
+        <tr><td>&nbsp;Email Message <samp class="red">*</samp></td></tr>
+        <tr>
+            <td>
+                <textarea cols="2" rows="5" ng-model="EmailMessage" name="Emailmessage" required disabled></textarea>
+            </td>
+        </tr>
+        <tr><td>&nbsp;Text Message <samp class="red">*</samp></td></tr>
+        <tr>
+            <td>
+                <textarea cols="2" rows="5" ng-model="Message" name="message" required disabled></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;Media URL
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div>
+                    <label ng-repeat="media in MediaList">
+                        <input type="checkbox"
+                               name="selectedmedia[]"
+                               value="{{media.ID}}"
+                               ng-checked="selectedmedia.indexOf(media.ID) > -1"
+                               ng-click="toggleMedia(media.ID)"> {{media.Name}}
+                    </label>
+                </div>
+            </td>
+        </tr>
+       
+        <tr><th>Scheduling options</th></tr>
+        <tr>
+            <td>
+                <table>
+                    <tr><td><b>Publish On</b></td><td><b>Immediate</b> <input type="checkbox" ng-model="IsScheduled" name="IsScheduled" disabled /></td></tr>
+                    <tr ng-hide="IsScheduled"><td><b>Date</b></td><td><b>Time</b></td></tr>
+                    <tr ng-hide="IsScheduled">
+                        <td>
+                            <input type="date" id="Sdate" name="Sdate" ng-model="ScheduledOnDate" placeholder="yyyy-MM-dd" min="2013-01-01" max="2017-12-31" disabled />
+                        </td>
+                        <td>
+                            <input type="time" id="Stime" name="Stime" ng-model="ScheduledOnTime" placeholder="HH:mm:ss" disabled />
+                        </td>
+                    </tr>
+                </table>
+
+                
+
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+            <button ng-click="DeleteMessage(ID)" type="submit" class="btnsave">
+                    Delete
+                </button>
+
+                <button type="button" class="btnsave" ng-click="includeMessageSent('channelSentMessageList.html')">Cancel</button>
+            </td>
+        </tr>
+
+    </table>
+
+    <div class="link"></div>
+</div>-->
+
+<div class="slideSubBody">
+    <div class="setting-table" ng-controller="messageEditReviewController">
+        <!-- Row-->
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="setting-label">  Message Details</div>
+            </div>
+        </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="setting-label">Send Message To<span class="mandatory">*</span></div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="col-sm-8">
+                    <div class="setting-field">
+                        <label>
+                            <input name="ToAllUser" type="radio" ng-model="AllSubscribers" ng-value="true" ng-click="" required disabled /> All Subscribers
+                        </label>
+                        <label>
+                            <input name="SelectedUser" type="radio" ng-model="AllSubscribers" ng-value="false" ng-click="" required disabled />Select Subscribers
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row" ng-hide="AllSubscribers">
+                <div class="col-sm-4">
+                    <div class="setting-label">Select Users<span class="mandatory">*</span></div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="col-sm-8">
+                    <div class="setting-field">
+                        <label ng-hide="AllSubscribers" ng-repeat="subscriber in SubscriberList">
+
+                            <input type="checkbox"
+                                   name="selectedUsers[]"
+                                   value="{{subscriber.ID}}"
+                                   ng-checked="selectedUsers.indexOf(subscriber.ID) > -1"
+                                   ng-click="toggleSelection(subscriber.ID)"> {{subscriber.Name}}
+                        </label>                        
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="setting-label">Send Message By<span class="mandatory">*</span></div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="col-sm-8">
+                    <div class="setting-field">
+                        <label>
+                            <input type="checkbox" ng-model="IsSMS" name="sms" ng-required="!someSelected()" disabled />SMS
+                        </label>
+                        <label>
+                            <input type="checkbox" ng-model="IsEmail" name="email" ng-required="!someSelected()" disabled />Email
+                        </label>                      
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="setting-label">Subject<span class="mandatory">*</span></div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="col-sm-8">
+                    <div class="setting-field">
+                        <input name="subject" type="text" ng-model="Subject" maxlength="500" ng-required="IsEmail" disabled />                       
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="setting-label">Email Message<span class="mandatory">*</span></div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="col-sm-8">
+                    <div class="setting-field">
+                        <textarea cols="2" rows="5" ng-model="EmailMessage" name="EmailMessage" id="txtEmailMessage" ng-trim="false" ng-required="IsEmail" disabled></textarea>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="setting-label">Text Message<span class="mandatory">*</span></div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="col-sm-8">
+                    <div class="setting-field">
+                        <textarea cols="2" rows="5" ng-model="Message" name="message" id="txtMessage" ng-trim="false" ng-required="IsSMS" disabled ></textarea>                        
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" style="background:#333; color:#fff;">
+                <div class="col-sm-12">
+                    <div class=""><strong>Scheduling Options</strong></div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="">Publish On</div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="col-sm-6">
+                    <div class=""><label><input type="checkbox" ng-model="IsScheduled" name="IsScheduled" ng-click="IsScheduledMessage();" disabled /> Immediate</label> </div>
+                </div>
+            </div>
+
+            <div class="row" ng-hide="IsScheduled">
+                <div class="col-sm-6">
+                    <div class="">
+                        <label>  Date</label>
+                        <input type="date" id="Sdate" name="Sdate" ng-model="ScheduledOnDate" placeholder="yyyy-MM-dd" min="2013-01-01" max="2017-12-31" disabled />
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="">
+                        <label>
+                            Time
+                        </label>
+                        <input type="time" id="Stime" name="Stime" ng-model="ScheduledOnTime" placeholder="HH:mm:ss" disabled />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="setting-label">Media URL</div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="col-sm-8">
+                    <div class="setting-field">                        
+                        <label ng-repeat="media in MediaList">
+                            <input type="checkbox"
+                                   name="selectedmedia[]"
+                                   value="{{media.ID}}"
+                                   ng-checked="selectedmedia.indexOf(media.ID) > -1"
+                                   ng-click="toggleMedia(media.ID)"> {{media.Name}}
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row cart-buttons">
+
+
+                <div class="col-xs-4">
+                   
+                </div>
+
+                <div class="col-xs-4">
+                
+                </div>
+
+                <div class="col-xs-4 text-right">
+                   
+                    <button type="button" class="btn btn-default cancelBtn" ng-click="includeMessageSent('channelSentMessageList.html')">Cancel</button>
+                </div>
+            </div>
+
+        </div>
+   
+</div>

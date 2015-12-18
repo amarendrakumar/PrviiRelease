@@ -1,0 +1,35 @@
+﻿<div ng-controller="channelMessageListController">
+
+    <div class="link">
+        <b><a href="#/channelDetails/{{channelID}}"><img src="images/back.png" /></a></b> <a href="#/channelMessageCreate/{{channelID}}"> New Message</a>
+        &nbsp;|&nbsp;    <a href="#/channelMessageList/{{channelID}}">Scheduled MessageList</a>
+        <a></a>
+    </div>
+    <div class="linkHead">
+        <strong> Past Messages</strong>
+    </div>   
+    <div>
+        <table>
+            <tr>
+                <th>Subject</th>
+                <th style="width:31%;">ScheduledOn</th>
+                <th style="width:16%;"></th>
+                <th style="width:11%;" ></th>
+            </tr>
+            <tr ng-repeat="channelMessage in channelMessageList | filter: {Status : 2 } |orderBy: ScheduledOn : reverse">
+                <td>{{channelMessage.Subject}}</td>
+                <td>{{channelMessage.ScheduledOn | date: 'YYYY-MM-dd : hh:mm:ss'}}</td>
+                <td>
+                    <!--<div ng-show="channelMessage.Status ==1">Created</div>
+                    <div ng-show="channelMessage.Status ==2">Sent</div>
+                    <div ng-show="channelMessage.Status ==3">Approved</div>-->
+                    <a href="#/channelMessageEdit/{{channelMessage.ID}}">Resend</a>
+                   
+                </td>
+                <td>
+                    <a href="#/channelMessageView/{{channelMessage.ID}}">View</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

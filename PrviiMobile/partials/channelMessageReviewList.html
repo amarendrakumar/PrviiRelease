@@ -1,0 +1,27 @@
+﻿<!--<div ng-include="'partials/header.html'"></div>-->
+<div ng-controller="channelMessageReviewController" class="row">
+    <div class="" style="padding:0 2px;">
+        <table class="table-responsive">
+            <tr>
+                <th>Subject</th>
+                <th>ScheduledOn</th>
+                <!--<th>Status</th>-->
+                <th>>TimeZoneID </th>
+                <th></th>
+            </tr>
+            <tr ng-repeat="channelMessage in channelMessageList | filter: myFilter |orderBy: ScheduledOn : reverse">
+                <td>{{channelMessage.Subject}}</td>
+                <td>{{channelMessage.ScheduledOn | date: 'YYYY-MM-dd : h:mm:ss a'}}</td>
+                <!--<td>
+                    <div ng-show="channelMessage.Status ==1">Created</div>
+                    <div ng-show="channelMessage.Status ==2">Sent</div>
+                    <div ng-show="channelMessage.Status ==3">Approved</div>
+                </td>-->
+                <td>{{channelMessage.TimeZoneID}}</td>
+                <td>
+                    <a href="#/EditReview/{{channelMessage.ID}}">Review</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </div>

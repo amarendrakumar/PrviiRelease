@@ -1,0 +1,570 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Android">
+      <Configuration>Debug</Configuration>
+      <Platform>Android</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|iOS">
+      <Configuration>Debug</Configuration>
+      <Platform>iOS</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Windows-AnyCPU">
+      <Configuration>Debug</Configuration>
+      <Platform>Windows-AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Windows-x64">
+      <Configuration>Debug</Configuration>
+      <Platform>Windows-x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Windows-x86">
+      <Configuration>Debug</Configuration>
+      <Platform>Windows-x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Windows-ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>Windows-ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Windows Phone 8">
+      <Configuration>Debug</Configuration>
+      <Platform>Windows Phone 8</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Windows Phone (Universal)">
+      <Configuration>Debug</Configuration>
+      <Platform>Windows Phone (Universal)</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Android">
+      <Configuration>Release</Configuration>
+      <Platform>Android</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|iOS">
+      <Configuration>Release</Configuration>
+      <Platform>iOS</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Windows-AnyCPU">
+      <Configuration>Release</Configuration>
+      <Platform>Windows-AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Windows-x64">
+      <Configuration>Release</Configuration>
+      <Platform>Windows-x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Windows-x86">
+      <Configuration>Release</Configuration>
+      <Platform>Windows-x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Windows-ARM">
+      <Configuration>Release</Configuration>
+      <Platform>Windows-ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Windows Phone 8">
+      <Configuration>Release</Configuration>
+      <Platform>Windows Phone 8</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Windows Phone (Universal)">
+      <Configuration>Release</Configuration>
+      <Platform>Windows Phone (Universal)</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Distribution|Android">
+      <Configuration>Distribution</Configuration>
+      <Platform>Android</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Distribution|iOS">
+      <Configuration>Distribution</Configuration>
+      <Platform>iOS</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Distribution|Windows-AnyCPU">
+      <Configuration>Distribution</Configuration>
+      <Platform>Windows-AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Distribution|Windows-x64">
+      <Configuration>Distribution</Configuration>
+      <Platform>Windows-x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Distribution|Windows-x86">
+      <Configuration>Distribution</Configuration>
+      <Platform>Windows-x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Distribution|Windows-ARM">
+      <Configuration>Distribution</Configuration>
+      <Platform>Windows-ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Distribution|Windows Phone 8">
+      <Configuration>Distribution</Configuration>
+      <Platform>Windows Phone 8</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Distribution|Windows Phone (Universal)">
+      <Configuration>Distribution</Configuration>
+      <Platform>Windows Phone (Universal)</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>08c199a8-a7f8-4c3f-8a86-bb805e2fd06e</ProjectGuid>
+    <SccProjectName>"%24/Prvii/QualityRecords/Development/SourceCode/PrviiReleaseNew/Prvii/PrviiMobile/Prvii.root/Prvii", CTWAAAAA</SccProjectName>
+    <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+    <SccAuxPath />
+    <SccLocalPath>..</SccLocalPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DefaultReferenceGroup>Implicit (Multi-Device Apps)</DefaultReferenceGroup>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup Condition="'$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0'">
+    <VisualStudioVersion>12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="scripts\Progressbar.js" />
+    <Content Include="scripts\shoppingCart.js" />
+    <Content Include="scripts\subscriberChannelDetails.js" />
+    <Content Include="scripts\subscriberChannelList.js" />
+    <Content Include="scripts\subscriberChannelMessage.js" />
+    <Content Include="scripts\subscriberChannelMessageview.js" />
+    <Content Include="scripts\subscriberMessageView.js" />
+    <Content Include="scripts\userProfile.js" />
+    <Content Include="scripts\userProfileEdit.js" />
+    <Folder Include="images\" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\style.css" />
+    <Content Include="font-awesome\css\font-awesome.css" />
+    <Content Include="font-awesome\css\font-awesome.min.css" />
+    <Content Include="font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="font-awesome\less\bordered-pulled.less" />
+    <Content Include="font-awesome\less\core.less" />
+    <Content Include="font-awesome\less\fixed-width.less" />
+    <Content Include="font-awesome\less\font-awesome.less" />
+    <Content Include="font-awesome\less\icons.less" />
+    <Content Include="font-awesome\less\larger.less" />
+    <Content Include="font-awesome\less\list.less" />
+    <Content Include="font-awesome\less\mixins.less" />
+    <Content Include="font-awesome\less\path.less" />
+    <Content Include="font-awesome\less\rotated-flipped.less" />
+    <Content Include="font-awesome\less\spinning.less" />
+    <Content Include="font-awesome\less\stacked.less" />
+    <Content Include="font-awesome\less\variables.less" />
+    <Content Include="font-awesome\scss\font-awesome.scss" />
+    <Content Include="font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="font-awesome\scss\_core.scss" />
+    <Content Include="font-awesome\scss\_fixed-width.scss" />
+    <Content Include="font-awesome\scss\_icons.scss" />
+    <Content Include="font-awesome\scss\_larger.scss" />
+    <Content Include="font-awesome\scss\_list.scss" />
+    <Content Include="font-awesome\scss\_mixins.scss" />
+    <Content Include="font-awesome\scss\_path.scss" />
+    <Content Include="font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="font-awesome\scss\_spinning.scss" />
+    <Content Include="font-awesome\scss\_stacked.scss" />
+    <Content Include="font-awesome\scss\_variables.scss" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="image\intro-bg.jpg" />
+    <Content Include="image\logo.png" />
+    <Content Include="image\pic.jpg" />
+    <Content Include="image\pic1.jpg" />
+    <Content Include="image\PRVII300.png" />
+    <Content Include="image\Prviibg.png" />
+    <Content Include="image\Slider.png" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="merges\android\scripts\android2.3-jscompat.js" />
+    <Content Include="merges\android\scripts\platformOverrides.js" />
+    <Folder Include="merges\ios\" />
+    <Content Include="merges\windows\scripts\platformOverrides.js" />
+    <Content Include="merges\windows\scripts\winstore-jscompat.js" />
+    <Folder Include="merges\wp8\" />
+    <Folder Include="res\icons\android\" />
+    <Folder Include="res\icons\ios\" />
+    <Folder Include="res\icons\wp8\" />
+    <Folder Include="res\icons\windows\" />
+    <Folder Include="res\screens\android\" />
+    <Folder Include="res\screens\ios\" />
+    <Folder Include="res\screens\windows\" />
+    <Folder Include="res\screens\wp8\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="config.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="index.html" />
+    <Content Include="partials\appleIndex.html" />
+    <Content Include="partials\changePassword.html" />
+    <Content Include="partials\channelAllMessageList.html" />
+    <Content Include="partials\channelDetails.html" />
+    <Content Include="partials\channelEvent.html" />
+    <Content Include="partials\channelFullDetails.html" />
+    <Content Include="partials\channelInApp.html" />
+    <Content Include="partials\channelList.html" />
+    <Content Include="partials\channelMessageCreate.html" />
+    <Content Include="partials\channelMessageEdit.html" />
+    <Content Include="partials\channelMessageList.html" />
+    <Content Include="partials\channelMessageListDelete.html" />
+    <Content Include="partials\channelMessageReviewList.html" />
+    <Content Include="partials\channelMessageView.html" />
+    <Content Include="partials\channelMessageViewDelete.html" />
+    <Content Include="partials\channelMessageViewPending.html" />
+    <Content Include="partials\channelMessageViewSend.html" />
+    <Content Include="partials\channelPastMessageList.html" />
+    <Content Include="partials\channelPendingMessageList.html" />
+    <Content Include="partials\channelRevenue.html" />
+    <Content Include="partials\channelSentMessageList.html" />
+    <Content Include="partials\channelSubscriberAllMessageList.html" />
+    <Content Include="partials\channelSubscriberDetails.html" />
+    <Content Include="partials\channelSubscriberList.html" />
+    <Content Include="partials\channelSubscriberMessageList.html" />
+    <Content Include="partials\channelSubscriberPastMessageList.html" />
+    <Content Include="partials\channelSubscriberStatistics.html" />
+    <Content Include="partials\contact.html" />
+    <Content Include="partials\header.html" />
+    <Content Include="partials\home.html" />
+    <Content Include="partials\login.html" />
+    <Content Include="partials\messageCreate.html" />
+    <Content Include="partials\messageEditReview.html" />
+    <Content Include="partials\newChannelsList.html" />
+    <Content Include="partials\Registration.html" />
+    <Content Include="partials\shoppingCart.html" />
+    <Content Include="partials\subscriberchannelFullDetails.html" />
+    <Content Include="partials\subscriberchannelFullDetailsSubscribe.html" />
+    <Content Include="partials\subscriberChannelList.html" />
+    <Content Include="partials\subscriberChannelMessage.html" />
+    <Content Include="partials\subscriberChannelMessageView.html" />
+    <Content Include="partials\subscriberMessageView.html" />
+    <Content Include="partials\userProfile.html" />
+    <Content Include="partials\userProfileEdit.html" />
+    <Content Include="partials\userProfileType.html" />
+    <Content Include="plugins\org.apache.cordova.console\.fetch.json" />
+    <Content Include="plugins\org.apache.cordova.console\CONTRIBUTING.md" />
+    <Content Include="plugins\org.apache.cordova.console\doc\de\index.md" />
+    <Content Include="plugins\org.apache.cordova.console\doc\es\index.md" />
+    <Content Include="plugins\org.apache.cordova.console\doc\fr\index.md" />
+    <Content Include="plugins\org.apache.cordova.console\doc\index.md" />
+    <Content Include="plugins\org.apache.cordova.console\doc\it\index.md" />
+    <Content Include="plugins\org.apache.cordova.console\doc\ja\index.md" />
+    <Content Include="plugins\org.apache.cordova.console\doc\ko\index.md" />
+    <Content Include="plugins\org.apache.cordova.console\doc\pl\index.md" />
+    <Content Include="plugins\org.apache.cordova.console\doc\ru\index.md" />
+    <Content Include="plugins\org.apache.cordova.console\doc\zh\index.md" />
+    <Content Include="plugins\org.apache.cordova.console\LICENSE" />
+    <Content Include="plugins\org.apache.cordova.console\NOTICE" />
+    <Content Include="plugins\org.apache.cordova.console\package.json" />
+    <Content Include="plugins\org.apache.cordova.console\plugin.xml" />
+    <Content Include="plugins\org.apache.cordova.console\README.md" />
+    <Content Include="plugins\org.apache.cordova.console\RELEASENOTES.md" />
+    <Content Include="plugins\org.apache.cordova.console\src\ios\CDVLogger.h" />
+    <Content Include="plugins\org.apache.cordova.console\src\ios\CDVLogger.m" />
+    <Content Include="plugins\org.apache.cordova.console\src\ubuntu\console.cpp" />
+    <Content Include="plugins\org.apache.cordova.console\src\ubuntu\console.h" />
+    <Content Include="plugins\org.apache.cordova.console\src\wp\DebugConsole.cs" />
+    <Content Include="plugins\org.apache.cordova.console\www\console-via-logger.js" />
+    <Content Include="plugins\org.apache.cordova.console\www\logger.js" />
+    <Content Include="plugins\org.apache.cordova.device\.fetch.json" />
+    <Content Include="plugins\org.apache.cordova.device\CONTRIBUTING.md" />
+    <Content Include="plugins\org.apache.cordova.device\doc\de\index.md" />
+    <Content Include="plugins\org.apache.cordova.device\doc\es\index.md" />
+    <Content Include="plugins\org.apache.cordova.device\doc\fr\index.md" />
+    <Content Include="plugins\org.apache.cordova.device\doc\index.md" />
+    <Content Include="plugins\org.apache.cordova.device\doc\it\index.md" />
+    <Content Include="plugins\org.apache.cordova.device\doc\ja\index.md" />
+    <Content Include="plugins\org.apache.cordova.device\doc\ko\index.md" />
+    <Content Include="plugins\org.apache.cordova.device\doc\pl\index.md" />
+    <Content Include="plugins\org.apache.cordova.device\doc\ru\index.md" />
+    <Content Include="plugins\org.apache.cordova.device\doc\zh\index.md" />
+    <Content Include="plugins\org.apache.cordova.device\LICENSE" />
+    <Content Include="plugins\org.apache.cordova.device\NOTICE" />
+    <Content Include="plugins\org.apache.cordova.device\package.json" />
+    <Content Include="plugins\org.apache.cordova.device\package.json1" />
+    <Content Include="plugins\org.apache.cordova.device\plugin.xml" />
+    <Content Include="plugins\org.apache.cordova.device\README.md" />
+    <Content Include="plugins\org.apache.cordova.device\RELEASENOTES.md" />
+    <Content Include="plugins\org.apache.cordova.device\src\android\Device.java" />
+    <Content Include="plugins\org.apache.cordova.device\src\blackberry10\index.js" />
+    <Content Include="plugins\org.apache.cordova.device\src\browser\DeviceProxy.js" />
+    <Content Include="plugins\org.apache.cordova.device\src\firefoxos\DeviceProxy.js" />
+    <Content Include="plugins\org.apache.cordova.device\src\ios\CDVDevice.h" />
+    <Content Include="plugins\org.apache.cordova.device\src\ios\CDVDevice.m" />
+    <Content Include="plugins\org.apache.cordova.device\src\tizen\DeviceProxy.js" />
+    <Content Include="plugins\org.apache.cordova.device\src\ubuntu\device.cpp" />
+    <Content Include="plugins\org.apache.cordova.device\src\ubuntu\device.h" />
+    <Content Include="plugins\org.apache.cordova.device\src\ubuntu\device.js" />
+    <Content Include="plugins\org.apache.cordova.device\src\windows8\DeviceProxy.js" />
+    <Content Include="plugins\org.apache.cordova.device\src\windows\DeviceProxy.js" />
+    <Content Include="plugins\org.apache.cordova.device\src\wp\Device.cs" />
+    <Content Include="plugins\org.apache.cordova.device\tests\plugin.xml" />
+    <Content Include="plugins\org.apache.cordova.device\tests\tests.js" />
+    <Content Include="plugins\org.apache.cordova.device\www\device.js" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\.fetch.json" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\CONTRIBUTING.md" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\doc\de\index.md" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\doc\es\index.md" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\doc\fr\index.md" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\doc\index.md" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\doc\it\index.md" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\doc\ja\index.md" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\doc\ko\index.md" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\doc\pl\index.md" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\doc\ru\index.md" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\doc\zh\index.md" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\LICENSE" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\NOTICE" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\package.json" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\plugin.xml" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\README.md" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\RELEASENOTES.md" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\src\amazon\InAppBrowser.java" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\src\amazon\InAppChromeClient.java" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\src\android\InAppBrowser.java" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\src\android\InAppBrowserDialog.java" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\src\android\InAppChromeClient.java" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\src\android\res\drawable-hdpi\ic_action_next_item.png" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\src\android\res\drawable-hdpi\ic_action_previous_item.png" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\src\android\res\drawable-hdpi\ic_action_remove.png" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\src\android\res\drawable-mdpi\ic_action_next_item.png" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\src\android\res\drawable-mdpi\ic_action_previous_item.png" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\src\android\res\drawable-mdpi\ic_action_remove.png" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\src\android\res\drawable-xhdpi\ic_action_next_item.png" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\src\android\res\drawable-xhdpi\ic_action_previous_item.png" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\src\android\res\drawable-xhdpi\ic_action_remove.png" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\src\android\res\drawable-xxhdpi\ic_action_next_item.png" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\src\android\res\drawable-xxhdpi\ic_action_previous_item.png" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\src\android\res\drawable-xxhdpi\ic_action_remove.png" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\src\blackberry10\README.md" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\src\firefoxos\InAppBrowserProxy.js" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\src\ios\CDVInAppBrowser.h" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\src\ios\CDVInAppBrowser.m" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\src\ubuntu\close.png" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\src\ubuntu\inappbrowser.cpp" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\src\ubuntu\inappbrowser.h" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\src\ubuntu\InAppBrowser.qml" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\src\wp\InAppBrowser.cs" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\tests\plugin.xml" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\tests\resources\inject.css" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\tests\resources\inject.html" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\tests\resources\inject.js" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\tests\resources\local.html" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\tests\resources\local.pdf" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\tests\resources\video.html" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\tests\tests.js" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\www\inappbrowser.js" />
+    <Content Include="plugins\org.apache.cordova.inappbrowser\www\windows8\InAppBrowserProxy.js" />
+    <Content Include="plugins\org.apache.cordova.media\.fetch.json" />
+    <Content Include="plugins\org.apache.cordova.media\CONTRIBUTING.md" />
+    <Content Include="plugins\org.apache.cordova.media\doc\de\index.md" />
+    <Content Include="plugins\org.apache.cordova.media\doc\es\index.md" />
+    <Content Include="plugins\org.apache.cordova.media\doc\fr\index.md" />
+    <Content Include="plugins\org.apache.cordova.media\doc\index.md" />
+    <Content Include="plugins\org.apache.cordova.media\doc\it\index.md" />
+    <Content Include="plugins\org.apache.cordova.media\doc\ja\index.md" />
+    <Content Include="plugins\org.apache.cordova.media\doc\ko\index.md" />
+    <Content Include="plugins\org.apache.cordova.media\doc\pl\index.md" />
+    <Content Include="plugins\org.apache.cordova.media\doc\ru\index.md" />
+    <Content Include="plugins\org.apache.cordova.media\doc\zh\index.md" />
+    <Content Include="plugins\org.apache.cordova.media\LICENSE" />
+    <Content Include="plugins\org.apache.cordova.media\NOTICE" />
+    <Content Include="plugins\org.apache.cordova.media\package.json" />
+    <Content Include="plugins\org.apache.cordova.media\plugin.xml" />
+    <Content Include="plugins\org.apache.cordova.media\README.md" />
+    <Content Include="plugins\org.apache.cordova.media\RELEASENOTES.md" />
+    <Content Include="plugins\org.apache.cordova.media\src\android\AudioHandler.java" />
+    <Content Include="plugins\org.apache.cordova.media\src\android\AudioPlayer.java" />
+    <Content Include="plugins\org.apache.cordova.media\src\android\FileHelper.java" />
+    <Content Include="plugins\org.apache.cordova.media\src\blackberry10\index.js" />
+    <Content Include="plugins\org.apache.cordova.media\src\ios\CDVSound.h" />
+    <Content Include="plugins\org.apache.cordova.media\src\ios\CDVSound.m" />
+    <Content Include="plugins\org.apache.cordova.media\src\tizen\MediaProxy.js" />
+    <Content Include="plugins\org.apache.cordova.media\src\ubuntu\media.cpp" />
+    <Content Include="plugins\org.apache.cordova.media\src\ubuntu\media.h" />
+    <Content Include="plugins\org.apache.cordova.media\src\windows8\MediaProxy.js" />
+    <Content Include="plugins\org.apache.cordova.media\src\wp\AudioPlayer.cs" />
+    <Content Include="plugins\org.apache.cordova.media\src\wp\Media.cs" />
+    <Content Include="plugins\org.apache.cordova.media\tests\plugin.xml" />
+    <Content Include="plugins\org.apache.cordova.media\tests\tests.js" />
+    <Content Include="plugins\org.apache.cordova.media\www\Media.js" />
+    <Content Include="plugins\org.apache.cordova.media\www\MediaError.js" />
+    <Content Include="plugins\org.apache.cordova.network-information\.fetch.json" />
+    <Content Include="plugins\org.apache.cordova.network-information\CONTRIBUTING.md" />
+    <Content Include="plugins\org.apache.cordova.network-information\doc\de\index.md" />
+    <Content Include="plugins\org.apache.cordova.network-information\doc\es\index.md" />
+    <Content Include="plugins\org.apache.cordova.network-information\doc\fr\index.md" />
+    <Content Include="plugins\org.apache.cordova.network-information\doc\index.md" />
+    <Content Include="plugins\org.apache.cordova.network-information\doc\it\index.md" />
+    <Content Include="plugins\org.apache.cordova.network-information\doc\ja\index.md" />
+    <Content Include="plugins\org.apache.cordova.network-information\doc\ko\index.md" />
+    <Content Include="plugins\org.apache.cordova.network-information\doc\pl\index.md" />
+    <Content Include="plugins\org.apache.cordova.network-information\doc\ru\index.md" />
+    <Content Include="plugins\org.apache.cordova.network-information\doc\zh\index.md" />
+    <Content Include="plugins\org.apache.cordova.network-information\LICENSE" />
+    <Content Include="plugins\org.apache.cordova.network-information\NOTICE" />
+    <Content Include="plugins\org.apache.cordova.network-information\package.json" />
+    <Content Include="plugins\org.apache.cordova.network-information\plugin.xml" />
+    <Content Include="plugins\org.apache.cordova.network-information\README.md" />
+    <Content Include="plugins\org.apache.cordova.network-information\RELEASENOTES.md" />
+    <Content Include="plugins\org.apache.cordova.network-information\src\android\NetworkManager.java" />
+    <Content Include="plugins\org.apache.cordova.network-information\src\blackberry10\index.js" />
+    <Content Include="plugins\org.apache.cordova.network-information\src\browser\NetworkProxy.js" />
+    <Content Include="plugins\org.apache.cordova.network-information\src\firefoxos\NetworkProxy.js" />
+    <Content Include="plugins\org.apache.cordova.network-information\src\ios\CDVConnection.h" />
+    <Content Include="plugins\org.apache.cordova.network-information\src\ios\CDVConnection.m" />
+    <Content Include="plugins\org.apache.cordova.network-information\src\ios\CDVReachability.h" />
+    <Content Include="plugins\org.apache.cordova.network-information\src\ios\CDVReachability.m" />
+    <Content Include="plugins\org.apache.cordova.network-information\src\tizen\NetworkProxy.js" />
+    <Content Include="plugins\org.apache.cordova.network-information\src\ubuntu\network_information.cpp" />
+    <Content Include="plugins\org.apache.cordova.network-information\src\ubuntu\network_information.h" />
+    <Content Include="plugins\org.apache.cordova.network-information\src\windows8\NetworkInfoProxy.js" />
+    <Content Include="plugins\org.apache.cordova.network-information\src\wp\NetworkStatus.cs" />
+    <Content Include="plugins\org.apache.cordova.network-information\tests\plugin.xml" />
+    <Content Include="plugins\org.apache.cordova.network-information\tests\tests.js" />
+    <Content Include="plugins\org.apache.cordova.network-information\www\Connection.js" />
+    <Content Include="plugins\org.apache.cordova.network-information\www\network.js" />
+    <Content Include="scripts\angular-resource.min.js" />
+    <Content Include="scripts\angular-route.min.js" />
+    <Content Include="scripts\angular.min.js" />
+    <Content Include="scripts\app.js" />
+    <Content Include="scripts\appleIndex.js" />
+    <Content Include="scripts\cdv-plugin-paypal-mobile-sdk.js" />
+    <Content Include="scripts\changePassword.js" />
+    <Content Include="scripts\channelDetails.js" />
+    <Content Include="scripts\channelInApp.js" />
+    <Content Include="scripts\channelList.js" />
+    <Content Include="scripts\channelMessageCreate.js" />
+    <Content Include="scripts\channelMessageEdit.js" />
+    <Content Include="scripts\channelMessageList.js" />
+    <Content Include="scripts\channelMessageReview.js" />
+    <Content Include="scripts\channelMessageView.js" />
+    <Content Include="scripts\channelRevenue.js" />
+    <Content Include="scripts\channelSubscriberAllMessageList.js" />
+    <Content Include="scripts\channelSubscriberDetails.js" />
+    <Content Include="scripts\channelSubscriberList.js" />
+    <Content Include="scripts\channelSubscriberMessageList.js" />
+    <Content Include="scripts\channelSubscriberPastWeekMessageList.js" />
+    <Content Include="scripts\channelSubscriberStatistics.js" />
+    <Content Include="scripts\checkout.js" />
+    <Content Include="scripts\contact.js" />
+    <Content Include="scripts\header.js" />
+    <Content Include="scripts\home.js" />
+    <Content Include="scripts\index.js" />
+    <Content Include="scripts\js\angular-animate.min.js" />
+    <Content Include="scripts\js\angular-cookies.js" />
+    <Content Include="scripts\js\angular-resource.min.js" />
+    <Content Include="scripts\js\angular-route.min.js" />
+    <Content Include="scripts\js\angular-touch.min.js" />
+    <Content Include="scripts\js\angular.min.js" />
+    <Content Include="scripts\js\jquery-2.1.1.min.js" />
+    <Content Include="scripts\js\materialize.min.js" />
+    <Content Include="scripts\js\ng-cordova-mocks.js" />
+    <Content Include="scripts\js\ng-cordova-mocks.min.js" />
+    <Content Include="scripts\js\ng-cordova.js" />
+    <Content Include="scripts\js\ng-cordova.min.js" />
+    <Content Include="scripts\js\PushNotification.js" />
+    <Content Include="scripts\login.js" />
+    <Content Include="scripts\logout.js" />
+    <Content Include="scripts\messageEditReview.js" />
+    <Content Include="scripts\newChannelsList - Copy %283%29.js" />
+    <Content Include="scripts\newChannelsList.js" />
+    <Content Include="scripts\ngProgress.min.js" />
+    <Content Include="scripts\paypal-mobile-js-helper.js" />
+    <Content Include="scripts\platformOverrides.js" />
+    <Content Include="css\index.css" />
+    <Content Include="res\icons\android\icon-36-ldpi.png" />
+    <Content Include="res\icons\android\icon-48-mdpi.png" />
+    <Content Include="res\icons\android\icon-72-hdpi.png" />
+    <Content Include="res\icons\android\icon-96-xhdpi.png" />
+    <Content Include="res\icons\ios\icon-40.png" />
+    <Content Include="res\icons\ios\icon-40-2x.png" />
+    <Content Include="res\icons\ios\icon-50.png" />
+    <Content Include="res\icons\ios\icon-50-2x.png" />
+    <Content Include="res\icons\ios\icon-57.png" />
+    <Content Include="res\icons\ios\icon-57-2x.png" />
+    <Content Include="res\icons\ios\icon-60.png" />
+    <Content Include="res\icons\ios\icon-60-2x.png" />
+    <Content Include="res\icons\ios\icon-60-3x.png" />
+    <Content Include="res\icons\ios\icon-72.png" />
+    <Content Include="res\icons\ios\icon-72-2x.png" />
+    <Content Include="res\icons\ios\icon-76.png" />
+    <Content Include="res\icons\ios\icon-76-2x.png" />
+    <Content Include="res\icons\ios\icon-small.png" />
+    <Content Include="res\icons\ios\icon-small-2x.png" />
+    <Content Include="res\icons\windows\Square150x150Logo.scale-100.png" />
+    <Content Include="res\icons\windows\Square30x30Logo.scale-100.png" />
+    <Content Include="res\icons\windows\Square310x310Logo.scale-100.png" />
+    <Content Include="res\icons\windows\Square150x150Logo.scale-240.png" />
+    <Content Include="res\icons\windows\Square44x44Logo.scale-240.png" />
+    <Content Include="res\icons\windows\Square70x70Logo.scale-100.png" />
+    <Content Include="res\icons\windows\Square71x71Logo.scale-240.png" />
+    <Content Include="res\icons\windows\StoreLogo.scale-100.png" />
+    <Content Include="res\icons\windows\StoreLogo.scale-240.png" />
+    <Content Include="res\icons\windows\Wide310x150Logo.scale-100.png" />
+    <Content Include="res\icons\windows\Wide310x150Logo.scale-240.png" />
+    <Content Include="res\icons\wp8\ApplicationIcon.png" />
+    <Content Include="res\icons\wp8\Background.png" />
+    <Content Include="res\native\android\ant.properties" />
+    <Content Include="res\screens\android\screen-hdpi-landscape.png" />
+    <Content Include="res\screens\android\screen-hdpi-portrait.png" />
+    <Content Include="res\screens\android\screen-ldpi-landscape.png" />
+    <Content Include="res\screens\android\screen-ldpi-portrait.png" />
+    <Content Include="res\screens\android\screen-mdpi-landscape.png" />
+    <Content Include="res\screens\android\screen-mdpi-portrait.png" />
+    <Content Include="res\screens\android\screen-xhdpi-landscape.png" />
+    <Content Include="res\screens\android\screen-xhdpi-portrait.png" />
+    <Content Include="res\screens\ios\screen-ipad-landscape.png" />
+    <Content Include="res\screens\ios\screen-ipad-landscape-2x.png" />
+    <Content Include="res\screens\ios\screen-ipad-portrait.png" />
+    <Content Include="res\screens\ios\screen-ipad-portrait-2x.png" />
+    <Content Include="res\screens\ios\screen-iphone-568h-2x.png" />
+    <Content Include="res\screens\ios\screen-iphone-landscape-736h.png" />
+    <Content Include="res\screens\ios\screen-iphone-portrait.png" />
+    <Content Include="res\screens\ios\screen-iphone-portrait-2x.png" />
+    <Content Include="res\screens\ios\screen-iphone-portrait-667h.png" />
+    <Content Include="res\screens\ios\screen-iphone-portrait-736h.png" />
+    <Content Include="res\screens\windows\SplashScreen.scale-100.png" />
+    <Content Include="res\screens\windows\SplashScreen.scale-240.png" />
+    <Content Include="res\screens\windows\SplashScreenPhone.scale-240.png" />
+    <Content Include="res\screens\wp8\SplashScreenImage.jpg" />
+  </ItemGroup>
+  <PropertyGroup>
+    <TypeScriptToolsVersion>1.0</TypeScriptToolsVersion>
+    <DefaultReferenceGroup>Implicit (Multi-Device Apps)</DefaultReferenceGroup>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptCompileOnSaveEnabled>false</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptCompileOnSaveEnabled>false</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Distribution'">
+    <TypeScriptCompileOnSaveEnabled>false</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\CordovaTools\vs-mda-targets\Microsoft.MDA.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\CordovaTools\vs-mda-targets\Microsoft.TypeScript.MDA.targets" />
+  <PropertyGroup>
+    <ProjectUISubcaption>Tools for Apache Cordova</ProjectUISubcaption>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetPlatformIdentifier>MDD</TargetPlatformIdentifier>
+  </PropertyGroup>
+  <Target Name="EnsureBuildPrerequisites">
+    <!-- These errors will trigger if building from inside Visual Studio and requirements could not be determined -->
+    <Error Condition="$(MDAPropertiesEvaluated) == 'true' And $(NodeJsDir) == ''" Text="Path to NodeJs could not be determined. Please check that NodeJs has been installed." />
+    <Error Condition="$(MDAPropertiesEvaluated) == 'true' And $(MDAVsixDir) == ''" Text="Path to the Visual Studio Extension for Tools for Apache Cordova could not be determined. Please check that the extension has been installed." />
+    <!-- These errors will trigger if building from outside Visual Studio (e.g. command line) and environment variables have not been set -->
+    <Error Condition="$(MDAPropertiesEvaluated) == '' And $(NodeJsDir) == ''" Text="Path to NodeJs has not been specified. Please check that NodeJs has been installed and set the NodeJsDir environment variable before building." />
+    <Error Condition="$(MDAPropertiesEvaluated) == '' And $(MDAVsixDir) == ''" Text="Path to Visual Studio Extension for Tools for Apache Cordova has not been specified. Please install it and set the MDAVsixDir environment variable before building." />
+    <!-- Sanity check that things exist in the specified places. These are more likely to fail if building outside Visual Studio and the required environment variables have not been set, or set incorrectly. -->
+    <Error Condition="!Exists('$(NodeJsDir)') Or !Exists('$(NodeJsDir)\node.exe')" Text="The specified NodeJs directory $(NodeJsDir) either does not exist, or does not contain node.exe. Please check that NodeJs has been installed, and set the NodeJsDir variable to the correct directory." />
+    <Error Condition="!Exists('$(MDAVsixDir)') Or !Exists('$(MDAVsixDir)\packages\vs-mda')" Text="The specified directory to the Visual Studio extension $(MDAVsixDir)\node.exe either does not exist, or does not contain a packages\vs-mda sub-directory. Please check that the extension directory exists and set the MDAVsixDir variable to the correct directory." />
+    <!-- Installs (if necessary) the supporting Nodejs module -->
+    <Exec Command="&quot;$(MDAVsixDir)&quot;\packages\vs-mda\install &quot;$(NodeJsDir)&quot; &quot;$(MDAVsixDir)&quot;\packages\vs-mda" />
+  </Target>
+</Project>

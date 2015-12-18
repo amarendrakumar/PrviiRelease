@@ -1,0 +1,69 @@
+﻿<div ng-include="'partials/header.html'"></div>
+<!-- Intro Header -->
+<div class="intro">
+    <div class="after-login">
+        <div class="container" ng-controller="channelDetailsController">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="main-tabs">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <!-- Main Tab-->
+                                <div class="slideHead"  ng-click="includeView('channelFullDetails.html',view)">VIEW</div>
+                                <div class="slideSubBody" ng-show="view" ng-include="srcView">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <!-- Main Tab-->
+                                <div class="slideHead"  ng-click="includeEvent('channelEvent.html',event)">EVENTS AND COMMITMENTS </div>
+                                <div class="slideBody sub-tabs" ng-show="event" ng-include="srcEvent">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <!-- Main Tab-->
+                                <div class="slideHead" ng-click="includeMessage('messageCreate.html',message)">MESSAGES </div>
+                                <div class="slideBody sub-tabs" ng-show="message">
+                                    <div class="slideSubHead" ng-click="includeCreate('messageCreate.html',create)">CREATE NEW MESSAGE</div>
+                                    <div class="slideSubBody" ng-show="create" ng-include="srcMessage"></div>
+                                    <div class="slideSubHead" ng-click="includeModify('channelMessageList.html',modify)">MODIFY OR APPROVE PENDING MESSAGE</div>
+                                    <div ng-show="modify" ng-include="srcModify"  class="slideSubBody" ></div>
+                                    <div class="slideSubHead" ng-click="includeDelete('channelMessageListDelete.html',delete)">DELETE PENDING MESSAGE</div>
+                                    <div ng-show="delete" ng-include="srcDelete" class="slideSubBody"></div>
+
+                                    <div class="slideSubHead" ng-click="includeViewAll('channelAllMessageList.html',viewAll)">VIEW MESSAGES</div>
+                                    <div ng-show="viewAll" class="slideSubBody">
+                                        <div class="slideSubHead1" ng-click="includePending('channelPendingMessageList.html',viewPendingMessage)">PENDING</div>
+                                        <div class="slideSubBody1"  ng-show="viewPendingMessage" ng-include="srcViewPending"> </div>
+                                        <div class="slideSubHead1" ng-click="includeSent('channelSentMessageList.html',viewSentMessage)">SENT</div>
+                                        <div class="slideSubBody1" ng-show="viewSentMessage" ng-include="srcViewSent"> </div>
+                                        <div class="slideSubHead1" ng-click="includeAll('channelAllMessageList.html',viewAllMessage)">All</div>
+                                        <div class="slideSubBody1" ng-show="viewAllMessage" ng-include="srcViewAll"> </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <!-- Main Tab-->
+                                <div class="slideHead" ng-click="includeReports('',reports)">REPORTS </div>
+                                <div class="slideBody sub-tabs" ng-show="reports">
+                                    <div class="slideSubHead" ng-click="includeSubscriber('channelSubscriberList.html',subscriber)">SUBSCRIBERS</div>
+                                    <div class="slideSubBody" ng-show="subscriber" ng-include="srcSubscriber"></div>
+                                    <div class="slideSubHead" ng-click="includeStatistics('channelSubscriberStatistics.html',statistics)">ACTIVITY</div>
+                                    <div class="slideSubBody" ng-show="statistics" ng-include="srcReports"></div>
+                                    <div class="slideSubHead" ng-click="includeRevenue('channelRevenue.html',revenue)">REVENUE</div>
+                                    <div class="slideSubBody" ng-show="revenue" ng-include="srcRevenue"></div>
+                                </div>
+                                <div class="col-md-12">
+                                    <br />
+                                    <img ng-src="{{SERVICE_URL}}channel/GetMedia?channelID={{channelDetails.ID}}&mediaTypeID=1" style="width:100%;" />
+
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>

@@ -1,0 +1,41 @@
+﻿<div ng-include="'partials/header.html'"></div>
+
+<!-- Intro Header -->
+<div class="intro" ng-controller="HomeController">
+    <div class="after-login">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="main-tabs">
+                        <div class="row">
+                            <div class="col-md-12" ng-show={{ShowMenu('group')}}>
+                                <div class="slideHead"  ng-click="includeGroup('channelList.html',group)" title="Group" ng-show={{ShowMenu('group')}}> GROUP </div>
+                                <div class="slideBody" ng-show="group" ng-include="srcGroup"></div>
+                            </div>
+                            <div class="col-md-12" ng-show={{ShowMenu('celebrity')}}>
+                                <div class="slideHead" ng-click="includeCelebrity('channelList.html',celeberity)" title="CELEBRITY" ng-show={{ShowMenu('celebrity')}}> CELEBRITY</div>
+                                <div class="slideBody" ng-show="celeberity" ng-include="srcCelebrity"></div>
+                            </div>
+                            <div class="col-md-12" ng-show={{ShowMenu('subscriber')}}>
+                                <div class="slideHead" ng-click="includeSubscriber('',subscribchannel)" ng-show={{ShowMenu('subscriber')}}> SUBSCRIBER</div>
+                                <div class="slideBody sub-tabs" ng-show="subscribchannel">
+                                    <div class="slideSubHead" ng-click="includeSubscriberChannel('subscriberChannelList.html',subscribchannelList)">Your Celebrity VIP Fan Club(s)</div>
+                                    <div class="slideSubBody" ng-show="subscribchannelList" ng-include="srcSubscriber"></div>
+                                    <div class="slideSubHead" ng-click="includeChannel('newChannelsList.html',channel)">Other Celebrity VIP Fan Clubs to JOIN</div>
+                                    <div class="slideSubBody" ng-show="channel" ng-include="srcChannel"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">                                
+                               <div class="slideHead"  ng-click="includeContact('contact.html',contact)" itle="Contact">Contact</div>
+                               <div class="slideBody" ng-show="contact" ng-include="srcContact"></div>
+                            </div>
+                            <div class="col-md-12">                               
+                                <img src="image/Prviibg.png" style="width:100%;" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

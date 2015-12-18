@@ -1,0 +1,718 @@
+
+body {
+    padding-top: 70px;
+	font-family:calibri;
+	font-size:16px;
+}
+
+*{
+	outline:0;
+}
+
+a{
+  color: #781294;
+  text-decoration: none;
+  font-weight: normal;
+ }
+ 
+ a:focus, a:hover {
+  color: #781294;
+  text-decoration: underline;
+  outline:0;
+}
+
+input[type="file"]{
+	font-size: 12px;
+}
+
+.navbar-fixed-top .nav {
+    padding: 15px 0;
+}
+
+.navbar-fixed-top .navbar-brand {
+    padding: 0 15px;
+}
+
+.navbar-brand {
+  float: left;
+  height: 50px;
+  padding: 7px 15px;
+  font-size: 18px;
+  line-height: 20px;
+}
+.navbar-brand>img {
+  display: block;
+  width: 92px;
+}
+
+.navbar-inverse .navbar-nav>li>a.main-link, .dropdown .main-link, .dropdown .caret{
+	color:#DD61FF;
+}
+
+.navbar-inverse .dropdown, .dropup {
+  position: relative;
+  padding: 15px;
+  cursor:pointer;
+}
+
+.dropdown a.main-link:hover, .dropdown .caret:hover{
+	text-decoration:none;
+}
+
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+  color: #fff;
+  text-decoration: none;
+  background-color: #781294;
+}
+
+.navbar-inverse {
+  background-color: #000;
+  border-color: #000;
+}
+
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+
+.dropdown:hover{
+	background:#fff;
+	border-radius: 10px;
+}
+
+.dropdown:hover .dropdown-menu{
+	display:block;
+}
+
+.dropdown:focus .dropdown-menu{
+	display:none;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 80%;
+ }
+ 
+ .open>.dropdown-menu {
+    display: none;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+  border-color: #000;
+  width: auto;
+  float: right;
+}
+
+.list-table-head{
+	font-weight: 500;
+  border-bottom: 2px solid #781294;
+  font-size: 18px;
+  display: none;
+  background-color: #781294;
+  color: #fff;
+  padding:15px 0;
+  }
+  
+ .list-table-body{
+	border-bottom:1px solid;
+	padding-bottom:5px;
+	padding-top:5px;
+ }
+
+.list-table-body .celebrity-img{
+	overflow:hidden;
+}
+
+.list-table-body .celebrity-img img{
+	height:200px;
+}
+
+.celebrity-price .priceText, .activeText, .mobileText{
+		display:block;
+		float:left;
+		margin-right:10px;
+	}
+	
+	.activeText, .mobileText{
+		display:block;
+	}
+	
+	.celebrity-price .price{
+		font-weight:600;
+	}
+	
+	.celebrity-name{
+		margin-top: 85px;
+	}
+	
+	.celebrity-name input[type="checkbox"]{
+		width:18px;
+		height:18px;
+	}	
+	.celebrity-name a{
+		color:#781294;
+		font-size: 18px;
+	}
+	
+	.celebrity-price{
+		margin-top: 85px;
+	}
+	
+	.Unsubscribe-link{
+		color: #ff0000;
+		text-decoration: underline;
+	}
+	
+	.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus, 
+	.btn-default.active, .btn-default.focus, .btn-default:active, .btn-default:focus, .btn-default:hover, .open>.dropdown-toggle.btn-default{
+		color: #000;
+		background-color: #fff;
+		border-color: #781294;
+		outline: thin dotted;
+		outline: 0px auto -webkit-focus-ring-color;
+		outline-offset: -2px;
+	}
+	
+	.btn-default{
+	  border: 2px solid #781294;
+	  border-radius: 0;
+	  width:100%;
+		-webkit-transition: all .3s ease-in-out;
+		-moz-transition: all .3s ease-in-out;
+		transition: all .3s ease-in-out;
+	}
+
+	
+	.celebrity-btn button{
+	  margin-top: 75px;
+	  border: 2px solid #781294;
+	  border-radius: 0;
+	  
+		-webkit-transition: all .3s ease-in-out;
+		-moz-transition: all .3s ease-in-out;
+		transition: all .3s ease-in-out;
+	  }
+	  
+	  
+  	.celebrity-btn button:hover, .btn-default:hover{
+		color: #fff;
+		background-color: #781294;
+		border-color: #781294;
+	}
+	
+	.login-container label{
+		font-weight:normal;
+	}
+	
+	.form-control:focus {
+	  border-color: #781294;
+	  outline: 0;
+	  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(120, 18, 148, 0.49);
+	  box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(120, 18, 148, 0.49);
+	  color: #781294;
+	}
+	
+		
+	.solid-btn{
+		background-color: #781294;
+		color: #fff;
+	}
+	.solid-btn:hover{
+	  background-color: #9E23C0;
+	}
+	
+	footer{
+		border-top: 1px solid #D0D0D0;
+		margin-top: 60px;
+		padding:14px 0;
+	}
+	footer .footer{
+	text-align: center;
+	color: #C5C5C5;
+	font-size: 12px;
+	}
+	
+	.login-container h1{
+	  text-align: center;
+	  border-bottom: 1px solid #781294;
+	  padding-bottom: 10px;
+	  margin-bottom: 30px;
+	}
+	
+	.user-name{
+		float: right;
+	  padding: 15px;
+	  line-height: 49px;
+	  color: #fff;
+	}
+	
+	.after-login .celebrity-btn{
+		margin-top:85px;
+	}
+	
+	.celebrity-detail .tabs{
+	   background: rgba(120, 18, 148, 0.78);
+	  color: #fff;
+	  padding: 10px 0;
+	  border-radius: 5px;
+	  margin-top: 10px;
+	  cursor: pointer;
+	  width:100%;
+	  border:0;
+	  }
+	 
+	.celebrity-detail .tabs:hover{
+	    background-color: #9E23C0;
+	}
+	
+	.celebrity-detail .bio{
+		padding: 10px;
+	  background-color: rgba(251, 236, 255, 0.7);
+	  border-radius: 5px;
+	  box-shadow: 0px 0px 16px -1px;
+	  margin-bottom: 16px;
+	  color: #000;
+	  font-size: 18px;
+	 }
+	 
+	 label.normal{
+		font-weight:normal;
+		margin-right:10px;
+	 }
+	 
+	 .hint{
+		font-size:13px;
+		color:green;
+	}
+	
+	.stripped .form-group{
+		padding: 10px 0 7px 0;
+		background-color: #f4f4f4;
+	}
+	  
+	 .scrollable-div{
+		height:140px;
+		overflow-x:hidden;
+		overflow-y:auto;
+	 }
+	 
+	 .table-striped>tbody>tr{
+		height:34px;
+	 }
+	 
+	 .pagination>li>a, .pagination>li>span {
+	  color: #666;
+	  }
+	 .pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+	  background-color: #781294;
+	  border-color: #781294;
+	}
+	
+	.celebrity_bg{
+		background:url("http://richestcelebrities.org/wp-content/uploads/2015/05/Ian-Somerhalder-Net-Worth.jpg");
+		background-size: cover;
+		padding: 20px 0;
+	}
+	
+@media(min-width:768px) {
+    body {
+        padding-top: 100px;
+    }
+
+    .navbar-fixed-top .navbar-brand {
+        padding: 15px 0;
+    }
+	.navbar-nav {
+	  float: right;
+	  margin: 0;
+	}
+	
+	.list-table-head{
+	  display:block;
+	}
+	
+	.celebrity-price .priceText, .activeText, .mobileText{
+		display:none;
+	}
+	
+	.celebrity-price .price{
+		font-weight:normal;
+	}
+}
+
+@media(max-width:1028px) {
+.list-table-head {
+	font-size:13px;
+}
+.celebrity-name a {
+  font-size: 14px;
+}
+}
+
+@media(max-width:991px) {
+	.after-login .list-table-head{
+		display:none;
+	}
+	
+	.after-login .list-table-body {
+	  border-bottom: 0px solid;
+	  padding-bottom: 30px;
+	  padding-top: 30px;
+	  border-top: 1px solid;
+	  text-align: center;
+	}
+	
+	.after-login .list-table-body .celebrity-img img {
+	  height: auto;
+	  width: 80%;
+	  max-width: 300px;
+	}
+	
+	.after-login .celebrity-name a {
+	  font-size: 20px;
+	}
+	
+	.after-login .celebrity-price .priceText, .activeText, .mobileText {
+	  float: none;
+	  margin-right: 0px;
+	  display:block
+	}
+	
+	.after-login .celebrity-name {
+	  margin-top: 15px;
+	}
+	
+	.after-login .celebrity-price {
+	  margin-top: 15px;
+	}
+	
+	.after-login .celebrity-btn{
+		 margin-top: 15px;
+	}
+	.after-login .celebrity-price .price {
+	  font-weight: 600;
+	  font-size:16px;
+	}
+	
+	.table-responsive{
+		font-size: 12px;
+	}
+	
+	.celebrity-detail .bio{
+	  font-size: 14px;
+	 }
+}
+
+
+@media(max-width:767px) {
+.list-table-body {
+  border-bottom: 0px solid;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  border-top: 1px solid;
+  text-align:center;
+}
+.list-table-body .celebrity-img img {
+  height: auto;
+  width: 80%;
+  max-width: 300px;
+}
+
+.celebrity-name {
+  margin-top: 10px;
+}
+.celebrity-name a {
+  font-size: 20px;
+}
+
+.celebrity-price {
+  margin-top: 10px;
+}
+
+.celebrity-price .priceText, .activeText, .mobileText {
+  float: none;
+  margin-right: 10px;
+}
+
+.celebrity-btn button {
+  margin-top: 15px;
+  max-width: 300px;
+  width: 100%;
+}
+
+.user-name {
+  padding: 0;
+  line-height: 0;
+  color: #fff;
+  margin-top: -25px;
+  right: 80px;
+  position: absolute;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+	width:100%;
+}
+
+.btn-default{
+	margin-top:10px;
+}
+
+.navbar-brand>img {
+  display: block;
+  width: 70px;
+  margin-top: 6px;
+}
+
+}
+
+@media(max-width:480px) {
+.user-name {
+  right: 65px;
+  font-size: 10px;
+}
+
+.navbar-brand>img {
+  display: block;
+  width: 55px;
+  margin-top: 10px;
+}
+
+h1{
+	font-size: 28px;
+}
+
+}
+
+
+.popup-wrapper{
+	position:fixed;
+	width:100%;
+	height:100%;
+	left:0;
+	top:0;
+	background:rgba(0, 0, 0, 0.58);
+	z-index:9;
+	display:none;
+}
+.popup-container{
+	position: absolute;
+    max-width: 400px;
+    width: 90%;
+    background-color: #f4f4f4;
+    z-index: 9;
+    height: 120px;
+    left: 50%;
+    margin-left: -200px;
+    top: 50%;
+    margin-top: -60px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.popup-container .button-div{
+	margin-top:17px;
+}
+
+.progressBackground {
+    position: fixed;
+    background-color: black;
+    opacity: 0.5;
+    overflow: hidden;
+    text-align: center;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.progressBox {
+    background-color: white;
+    border-radius: 10px;
+    position: fixed;
+    text-align: center;
+    vertical-align: middle;
+    width: 280px;
+    height: 60px;
+    top: 45%;
+    left: 40%;
+    padding-top: 15px;
+}
+
+
+.progressBackground {
+    position: fixed;
+    background-color: black;
+    opacity: 0.5;
+    overflow: hidden;
+    text-align: center;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.progressBox {
+    background-color: white;
+    border-radius: 10px;
+    position: fixed;
+    text-align: center;
+    vertical-align: middle;
+    width: 280px;
+    height: 60px;
+    top: 45%;
+    left: 40%;
+    padding-top: 15px;
+}
+
+.error-message{
+    color:red;
+    font-weight:bold;
+    margin-left:8%;
+    margin-top:0px;
+    padding-top:0px;
+clear: both; 
+display: inline-block; 
+line-height:9px;
+}
+
+.requiredField{
+    color:red;
+}
+
+
+
+
+.form-controlOld:-moz-placeholder {
+  color: #999999;
+}
+
+.form-controlOld::-moz-placeholder {
+  color: #999999;
+}
+
+.form-controlOld:-ms-input-placeholder {
+  color: #999999;
+}
+
+.form-controlOld::-webkit-input-placeholder {
+  color: #999999;
+}
+
+.form-controlOld {
+  width: 100%;
+  *height: 35px;
+  padding: 6px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #555555;
+  vertical-align: middle;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+          transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+          box-sizing: border-box;
+     -webkit-box-sizing:border-box;
+     -moz-box-sizing: border-box;
+}
+
+.form-controlOld:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+.form-controlOld[disabled],
+.form-controlOld[readonly],
+fieldset[disabled] .form-controlOld {
+  cursor: not-allowed;
+  background-color: #fff;
+  width: 100%;
+}
+
+textarea.form-controlOld {
+  height: auto;
+}
+
+
+.down {margin-top:18px;}
+
+body {
+  padding-top: 70px;
+  font-family: calibri;
+  font-size: 16px;
+  min-width: 320px;
+}
+
+ContentPlaceHolder1_upPage .btn-default {
+  margin-top: 0;
+  padding: 4px 0;
+}
+
+.celebrity-detail .col-md-6{
+	padding:5px;
+}
+
+.min-btns{
+	padding: 0 5px;
+}
+
+.popup-container {
+  position: absolute;
+  max-width: 400px;
+  width: 90%;
+  background-color: #f4f4f4;
+  z-index: 9;
+  min-height: 120px;
+  left: 50%;
+  margin-left: -200px;
+  top: 50%;
+  margin-top: -60px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.popup-container span{
+  word-break: break-all;
+}
+
+@media (max-width: 460px){
+	.popup-container {
+		  margin-left: -45%;
+	}
+}
+
+@media (max-width: 767px){
+	.celebrity-detail .tabs{
+		font-size:14px;
+	}
+
+	.dropdown:hover {
+		  background: transparent;
+	}
+	
+	.dropdown:hover .dropdown-menu {
+		  display: grid;
+	}
+	.open>.dropdown-menu {
+		  display: block;
+	}
+}
+
+@media (max-width: 767px){
+	.form-control{
+		margin-bottom:8px;	
+	}
+}
+
+.progressBox {
+	z-index:99999;
+}
+
+.progressBackground{
+	z-index:9999;
+}

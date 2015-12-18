@@ -1,0 +1,717 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PrviiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ChannelMedias">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ChannelID" Type="bigint" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="Content" Type="varbinary(max)" Nullable="false" />
+    <Property Name="MimeType" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="MediaTypeID" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ChannelMessageAttachments">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ChannelMessageID" Type="bigint" Nullable="false" />
+    <Property Name="ChannelMediaID" Type="bigint" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ChannelMessages">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ChannelID" Type="bigint" Nullable="false" />
+    <Property Name="SendToAll" Type="bit" Nullable="false" />
+    <Property Name="Subject" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="EmailMessage" Type="varchar(max)" />
+    <Property Name="Message" Type="varchar(max)" Nullable="false" />
+    <Property Name="SendBySMS" Type="bit" Nullable="false" />
+    <Property Name="SendByEmail" Type="bit" Nullable="false" />
+    <Property Name="IsScheduled" Type="bit" Nullable="false" />
+    <Property Name="ScheduledOn" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="TimeZoneID" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="StatusID" Type="smallint" Nullable="false" />
+    <Property Name="SentOn" Type="datetime2" Precision="7" />
+    <Property Name="SMSStatusID" Type="smallint" />
+  </EntityType>
+  <EntityType Name="Channels">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Firstname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Lastname" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Phone" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Price" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="BillingCycleID" Type="smallint" Nullable="false" />
+    <Property Name="NoOfBillingPeriod" Type="int" />
+    <Property Name="StatusID" Type="smallint" Nullable="false" />
+    <Property Name="TimeZoneID" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="Preclude" Type="bit" Nullable="false" />
+    <Property Name="PriceManagement" Type="text" />
+  </EntityType>
+  <EntityType Name="ChannelSubscriberMessages">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ChannelSubscriberID" Type="bigint" Nullable="false" />
+    <Property Name="ChannelMessageID" Type="bigint" Nullable="false" />
+    <Property Name="DeliveredOn" Type="datetime2" Precision="7" />
+    <Property Name="TimeZoneID" Type="varchar" MaxLength="200" />
+    <Property Name="SMSDeliveredOn" Type="datetime2" Precision="7" />
+    <Property Name="SMSStatus" Type="smallint" />
+    <Property Name="EmailStatus" Type="smallint" />
+    <Property Name="SMSCost" Type="decimal" Precision="5" Scale="5" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="MessageSID" Type="nvarchar" MaxLength="500" />
+    <Property Name="SMSErrorCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsMMS" Type="bit" />
+  </EntityType>
+  <EntityType Name="ChannelSubscribers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ChannelID" Type="bigint" Nullable="false" />
+    <Property Name="SubscriberID" Type="bigint" Nullable="false" />
+    <Property Name="EFD" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="ETD" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Countries">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="50" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GroupChannels">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GroupID" Type="bigint" Nullable="false" />
+    <Property Name="ChannelID" Type="bigint" Nullable="false" />
+    <Property Name="EFD" Type="date" Nullable="false" />
+    <Property Name="ETD" Type="date" />
+  </EntityType>
+  <EntityType Name="Groups">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Telephone" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Mobile" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Address1" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="Address2" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="ZipCode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IosTransactionLog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ShoppingCartItemsID" Type="bigint" Nullable="false" />
+    <Property Name="TransactionDate" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="TransactionDetails" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PaymentRecon">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProfileId" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Status" Type="smallint" />
+    <Property Name="AggregateAmount" Type="decimal" Precision="10" Scale="4" />
+    <Property Name="FinalPaymentDueDate" Type="datetime2" Precision="7" />
+    <Property Name="ProfileStartDate" Type="datetime2" Precision="7" />
+    <Property Name="CycleAmount" Type="decimal" Precision="10" Scale="4" />
+    <Property Name="Currency" Type="char" MaxLength="5" />
+    <Property Name="NextBillDate" Type="datetime2" Precision="7" />
+    <Property Name="TotalCycles" Type="int" />
+    <Property Name="CyclesCompleted" Type="int" />
+    <Property Name="CyclesRemaining" Type="int" />
+    <Property Name="FailedPmtCount" Type="int" />
+    <Property Name="LastPmtDate" Type="datetime2" Precision="7" />
+    <Property Name="LastPmtAmt" Type="decimal" Precision="10" Scale="4" />
+    <Property Name="CreatedOn" Type="datetime2" Precision="7" />
+    <Property Name="AlertCode" Type="int" />
+    <Property Name="ReconPick" Type="bit" />
+  </EntityType>
+  <EntityType Name="PrviiAccountMaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Account" Type="nvarchar" MaxLength="100" />
+    <Property Name="LevelID" Type="int" />
+    <Property Name="ParentID" Type="bigint" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PrviiChannelAccounting">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ChannelId" Type="bigint" />
+    <Property Name="AccountId" Type="bigint" />
+    <Property Name="Mode" Type="tinyint" />
+    <Property Name="Percentage" Type="decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="PrviiTransaction">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Total" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SubscriberId" Type="bigint" />
+    <Property Name="ChannelId" Type="bigint" />
+    <Property Name="AmountDetails" Type="text" />
+    <Property Name="TrnDate" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityType Name="ReconErrorLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProfileId" Type="varchar" MaxLength="50" />
+    <Property Name="ReconDate" Type="datetime" />
+    <Property Name="ErrorMessage" Type="varchar(max)" />
+    <Property Name="ErrorCode" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ShoppingCartItems">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ShoppingCartID" Type="bigint" Nullable="false" />
+    <Property Name="ChannelID" Type="bigint" Nullable="false" />
+    <Property Name="Price" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="UpdatedOn" Type="datetime2" Precision="7" />
+    <Property Name="PayerId" Type="varchar" MaxLength="100" />
+    <Property Name="PaymentStatusID" Type="smallint" />
+    <Property Name="PaymentProfileID" Type="varchar" MaxLength="50" />
+    <Property Name="BillingStartDate" Type="datetime2" Precision="7" />
+    <Property Name="BillingPeriodID" Type="smallint" />
+    <Property Name="BillingFrequency" Type="smallint" Nullable="false" />
+    <Property Name="TotalBillingCycles" Type="smallint" Nullable="false" />
+    <Property Name="ErrorCode" Type="varchar" MaxLength="50" />
+    <Property Name="ProfileStatus" Type="smallint" />
+    <Property Name="PaymentMode" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="ShoppingCarts">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SessionID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TotalPrice" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="UserID" Type="bigint" />
+    <Property Name="CreatedOn" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="UpdatedOn" Type="datetime2" Precision="7" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="States">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="50" />
+    <Property Name="CountryID" Type="bigint" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TransactionReconDetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TransactionId" Type="varchar" MaxLength="1000" />
+    <Property Name="Status" Type="smallint" />
+    <Property Name="GrossAmount" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="FeeAmount" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="NetAmount" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="PayerDisplayName" Type="varchar" MaxLength="1000" />
+    <Property Name="Type" Type="int" />
+    <Property Name="ProfileId" Type="nvarchar" MaxLength="50" />
+    <Property Name="TimeStamp" Type="datetime2" Precision="7" />
+    <Property Name="EndDate" Type="nvarchar" MaxLength="50" />
+    <Property Name="PriceDistribution" Type="varchar" MaxLength="5000" />
+    <Property Name="ChannelId" Type="bigint" />
+    <Property Name="SubscriberId" Type="bigint" />
+    <Property Name="ChannelName" Type="varchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="UserDeviceInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SubscriberId" Type="bigint" />
+    <Property Name="DeviceCordova" Type="nvarchar" MaxLength="500" />
+    <Property Name="DevicePaltform" Type="nvarchar" MaxLength="500" />
+    <Property Name="DeviceId" Type="nvarchar" MaxLength="500" />
+    <Property Name="DeviceVersion" Type="nvarchar" MaxLength="500" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="DeviceToken" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="UserProfiles">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Firstname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Lastname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Telephone" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Mobile" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="Address1" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="Address2" Type="varchar" MaxLength="1000" />
+    <Property Name="CountryID" Type="bigint" Nullable="false" />
+    <Property Name="ZipCode" Type="varchar" MaxLength="10" />
+    <Property Name="DeliveryMechanisms" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DeviceTypeID" Type="smallint" Nullable="false" />
+    <Property Name="NickName" Type="varchar" MaxLength="50" />
+    <Property Name="TimeZoneID" Type="varchar" MaxLength="200" />
+    <Property Name="StateID" Type="bigint" />
+    <Property Name="City" Type="varchar" MaxLength="50" />
+    <Property Name="GroupID" Type="bigint" />
+    <Property Name="ChannelID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="UserRoles">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="bigint" Nullable="false" />
+    <Property Name="RoleID" Type="smallint" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_ChannelMedias_Channels">
+    <End Role="Channels" Type="Self.Channels" Multiplicity="1" />
+    <End Role="ChannelMedias" Type="Self.ChannelMedias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Channels">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ChannelMedias">
+        <PropertyRef Name="ChannelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChannelMessageAttachments_ChannelMedias">
+    <End Role="ChannelMedias" Type="Self.ChannelMedias" Multiplicity="1" />
+    <End Role="ChannelMessageAttachments" Type="Self.ChannelMessageAttachments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChannelMedias">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ChannelMessageAttachments">
+        <PropertyRef Name="ChannelMediaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChannelMessageAttachments_ChannelMessages">
+    <End Role="ChannelMessages" Type="Self.ChannelMessages" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ChannelMessageAttachments" Type="Self.ChannelMessageAttachments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChannelMessages">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ChannelMessageAttachments">
+        <PropertyRef Name="ChannelMessageID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChannelMessages_Channels">
+    <End Role="Channels" Type="Self.Channels" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ChannelMessages" Type="Self.ChannelMessages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Channels">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ChannelMessages">
+        <PropertyRef Name="ChannelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChannelSubscriberMessages_ChannelMessages">
+    <End Role="ChannelMessages" Type="Self.ChannelMessages" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ChannelSubscriberMessages" Type="Self.ChannelSubscriberMessages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChannelMessages">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ChannelSubscriberMessages">
+        <PropertyRef Name="ChannelMessageID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChannelSubscriberMessages_ChannelSubscribers">
+    <End Role="ChannelSubscribers" Type="Self.ChannelSubscribers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ChannelSubscriberMessages" Type="Self.ChannelSubscriberMessages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChannelSubscribers">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ChannelSubscriberMessages">
+        <PropertyRef Name="ChannelSubscriberID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChannelSubscribers_Channels">
+    <End Role="Channels" Type="Self.Channels" Multiplicity="1" />
+    <End Role="ChannelSubscribers" Type="Self.ChannelSubscribers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Channels">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ChannelSubscribers">
+        <PropertyRef Name="ChannelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChannelSubscribers_UserProfiles">
+    <End Role="UserProfiles" Type="Self.UserProfiles" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ChannelSubscribers" Type="Self.ChannelSubscribers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfiles">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ChannelSubscribers">
+        <PropertyRef Name="SubscriberID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GroupChannels_Channels">
+    <End Role="Channels" Type="Self.Channels" Multiplicity="1" />
+    <End Role="GroupChannels" Type="Self.GroupChannels" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Channels">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="GroupChannels">
+        <PropertyRef Name="ChannelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GroupChannels_Groups">
+    <End Role="Groups" Type="Self.Groups" Multiplicity="1" />
+    <End Role="GroupChannels" Type="Self.GroupChannels" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Groups">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="GroupChannels">
+        <PropertyRef Name="GroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IosTransactionLog_ShoppingCartItems">
+    <End Role="ShoppingCartItems" Type="Self.ShoppingCartItems" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IosTransactionLog" Type="Self.IosTransactionLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ShoppingCartItems">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="IosTransactionLog">
+        <PropertyRef Name="ShoppingCartItemsID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PrviiChannelAccounting_Channels">
+    <End Role="Channels" Type="Self.Channels" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PrviiChannelAccounting" Type="Self.PrviiChannelAccounting" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Channels">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PrviiChannelAccounting">
+        <PropertyRef Name="ChannelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PrviiChannelAccounting_PrviiAccountMaster">
+    <End Role="PrviiAccountMaster" Type="Self.PrviiAccountMaster" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PrviiChannelAccounting" Type="Self.PrviiChannelAccounting" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PrviiAccountMaster">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PrviiChannelAccounting">
+        <PropertyRef Name="AccountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ShoppingCartItems_Channels">
+    <End Role="Channels" Type="Self.Channels" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ShoppingCartItems" Type="Self.ShoppingCartItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Channels">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ShoppingCartItems">
+        <PropertyRef Name="ChannelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ShoppingCartItems_ShoppingCarts">
+    <End Role="ShoppingCarts" Type="Self.ShoppingCarts" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ShoppingCartItems" Type="Self.ShoppingCartItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ShoppingCarts">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ShoppingCartItems">
+        <PropertyRef Name="ShoppingCartID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ShoppingCarts_UserProfiles">
+    <End Role="UserProfiles" Type="Self.UserProfiles" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ShoppingCarts" Type="Self.ShoppingCarts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfiles">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ShoppingCarts">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_States_Countries">
+    <End Role="Countries" Type="Self.Countries" Multiplicity="1" />
+    <End Role="States" Type="Self.States" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Countries">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="States">
+        <PropertyRef Name="CountryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserDeviceInfo_UserProfiles">
+    <End Role="UserProfiles" Type="Self.UserProfiles" Multiplicity="0..1" />
+    <End Role="UserDeviceInfo" Type="Self.UserDeviceInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfiles">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="UserDeviceInfo">
+        <PropertyRef Name="SubscriberId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserProfiles_Countries">
+    <End Role="Countries" Type="Self.Countries" Multiplicity="1" />
+    <End Role="UserProfiles" Type="Self.UserProfiles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Countries">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="UserProfiles">
+        <PropertyRef Name="CountryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserProfiles_Groups">
+    <End Role="Groups" Type="Self.Groups" Multiplicity="0..1" />
+    <End Role="UserProfiles" Type="Self.UserProfiles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Groups">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="UserProfiles">
+        <PropertyRef Name="GroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserProfiles_States">
+    <End Role="States" Type="Self.States" Multiplicity="0..1" />
+    <End Role="UserProfiles" Type="Self.UserProfiles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="States">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="UserProfiles">
+        <PropertyRef Name="StateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserRoles_UserProfiles">
+    <End Role="UserProfiles" Type="Self.UserProfiles" Multiplicity="1" />
+    <End Role="UserRoles" Type="Self.UserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfiles">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="UserRoles">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="PROC_GetProfileIdsforRecon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="ProcGetCelebrityRevenueReport" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ChannelID" Type="varchar" Mode="In" />
+    <Parameter Name="FromDate" Type="datetime2" Mode="In" />
+    <Parameter Name="ToDate" Type="datetime2" Mode="In" />
+  </Function>
+  <Function Name="ProcGetSubscriberStatisticsActivity" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ChannelID" Type="bigint" Mode="In" />
+    <Parameter Name="ReportType" Type="varchar" Mode="In" />
+    <Parameter Name="Period" Type="varchar" Mode="In" />
+    <Parameter Name="PeriodValue" Type="bigint" Mode="In" />
+  </Function>
+  <EntityContainer Name="PrviiModelStoreContainer">
+    <EntitySet Name="ChannelMedias" EntityType="Self.ChannelMedias" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ChannelMessageAttachments" EntityType="Self.ChannelMessageAttachments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ChannelMessages" EntityType="Self.ChannelMessages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Channels" EntityType="Self.Channels" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ChannelSubscriberMessages" EntityType="Self.ChannelSubscriberMessages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ChannelSubscribers" EntityType="Self.ChannelSubscribers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Countries" EntityType="Self.Countries" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GroupChannels" EntityType="Self.GroupChannels" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Groups" EntityType="Self.Groups" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IosTransactionLog" EntityType="Self.IosTransactionLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PaymentRecon" EntityType="Self.PaymentRecon" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PrviiAccountMaster" EntityType="Self.PrviiAccountMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PrviiChannelAccounting" EntityType="Self.PrviiChannelAccounting" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PrviiTransaction" EntityType="Self.PrviiTransaction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ReconErrorLog" EntityType="Self.ReconErrorLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ShoppingCartItems" EntityType="Self.ShoppingCartItems" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ShoppingCarts" EntityType="Self.ShoppingCarts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="States" EntityType="Self.States" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TransactionReconDetails" EntityType="Self.TransactionReconDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserDeviceInfo" EntityType="Self.UserDeviceInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserProfiles" EntityType="Self.UserProfiles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserRoles" EntityType="Self.UserRoles" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_ChannelMedias_Channels" Association="Self.FK_ChannelMedias_Channels">
+      <End Role="Channels" EntitySet="Channels" />
+      <End Role="ChannelMedias" EntitySet="ChannelMedias" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChannelMessageAttachments_ChannelMedias" Association="Self.FK_ChannelMessageAttachments_ChannelMedias">
+      <End Role="ChannelMedias" EntitySet="ChannelMedias" />
+      <End Role="ChannelMessageAttachments" EntitySet="ChannelMessageAttachments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChannelMessageAttachments_ChannelMessages" Association="Self.FK_ChannelMessageAttachments_ChannelMessages">
+      <End Role="ChannelMessages" EntitySet="ChannelMessages" />
+      <End Role="ChannelMessageAttachments" EntitySet="ChannelMessageAttachments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChannelMessages_Channels" Association="Self.FK_ChannelMessages_Channels">
+      <End Role="Channels" EntitySet="Channels" />
+      <End Role="ChannelMessages" EntitySet="ChannelMessages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChannelSubscriberMessages_ChannelMessages" Association="Self.FK_ChannelSubscriberMessages_ChannelMessages">
+      <End Role="ChannelMessages" EntitySet="ChannelMessages" />
+      <End Role="ChannelSubscriberMessages" EntitySet="ChannelSubscriberMessages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChannelSubscriberMessages_ChannelSubscribers" Association="Self.FK_ChannelSubscriberMessages_ChannelSubscribers">
+      <End Role="ChannelSubscribers" EntitySet="ChannelSubscribers" />
+      <End Role="ChannelSubscriberMessages" EntitySet="ChannelSubscriberMessages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChannelSubscribers_Channels" Association="Self.FK_ChannelSubscribers_Channels">
+      <End Role="Channels" EntitySet="Channels" />
+      <End Role="ChannelSubscribers" EntitySet="ChannelSubscribers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChannelSubscribers_UserProfiles" Association="Self.FK_ChannelSubscribers_UserProfiles">
+      <End Role="UserProfiles" EntitySet="UserProfiles" />
+      <End Role="ChannelSubscribers" EntitySet="ChannelSubscribers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GroupChannels_Channels" Association="Self.FK_GroupChannels_Channels">
+      <End Role="Channels" EntitySet="Channels" />
+      <End Role="GroupChannels" EntitySet="GroupChannels" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GroupChannels_Groups" Association="Self.FK_GroupChannels_Groups">
+      <End Role="Groups" EntitySet="Groups" />
+      <End Role="GroupChannels" EntitySet="GroupChannels" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IosTransactionLog_ShoppingCartItems" Association="Self.FK_IosTransactionLog_ShoppingCartItems">
+      <End Role="ShoppingCartItems" EntitySet="ShoppingCartItems" />
+      <End Role="IosTransactionLog" EntitySet="IosTransactionLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PrviiChannelAccounting_Channels" Association="Self.FK_PrviiChannelAccounting_Channels">
+      <End Role="Channels" EntitySet="Channels" />
+      <End Role="PrviiChannelAccounting" EntitySet="PrviiChannelAccounting" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PrviiChannelAccounting_PrviiAccountMaster" Association="Self.FK_PrviiChannelAccounting_PrviiAccountMaster">
+      <End Role="PrviiAccountMaster" EntitySet="PrviiAccountMaster" />
+      <End Role="PrviiChannelAccounting" EntitySet="PrviiChannelAccounting" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ShoppingCartItems_Channels" Association="Self.FK_ShoppingCartItems_Channels">
+      <End Role="Channels" EntitySet="Channels" />
+      <End Role="ShoppingCartItems" EntitySet="ShoppingCartItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ShoppingCartItems_ShoppingCarts" Association="Self.FK_ShoppingCartItems_ShoppingCarts">
+      <End Role="ShoppingCarts" EntitySet="ShoppingCarts" />
+      <End Role="ShoppingCartItems" EntitySet="ShoppingCartItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ShoppingCarts_UserProfiles" Association="Self.FK_ShoppingCarts_UserProfiles">
+      <End Role="UserProfiles" EntitySet="UserProfiles" />
+      <End Role="ShoppingCarts" EntitySet="ShoppingCarts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_States_Countries" Association="Self.FK_States_Countries">
+      <End Role="Countries" EntitySet="Countries" />
+      <End Role="States" EntitySet="States" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserDeviceInfo_UserProfiles" Association="Self.FK_UserDeviceInfo_UserProfiles">
+      <End Role="UserProfiles" EntitySet="UserProfiles" />
+      <End Role="UserDeviceInfo" EntitySet="UserDeviceInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserProfiles_Countries" Association="Self.FK_UserProfiles_Countries">
+      <End Role="Countries" EntitySet="Countries" />
+      <End Role="UserProfiles" EntitySet="UserProfiles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserProfiles_Groups" Association="Self.FK_UserProfiles_Groups">
+      <End Role="Groups" EntitySet="Groups" />
+      <End Role="UserProfiles" EntitySet="UserProfiles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserProfiles_States" Association="Self.FK_UserProfiles_States">
+      <End Role="States" EntitySet="States" />
+      <End Role="UserProfiles" EntitySet="UserProfiles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserRoles_UserProfiles" Association="Self.FK_UserRoles_UserProfiles">
+      <End Role="UserProfiles" EntitySet="UserProfiles" />
+      <End Role="UserRoles" EntitySet="UserRoles" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

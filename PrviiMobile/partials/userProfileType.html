@@ -1,0 +1,49 @@
+﻿<!--<div ng-include="'partials/header.html'"></div>
+<div ng-controller="loginController">
+    <div class="link">Select User Type </div>    
+        <table class="CreateMessage">
+            <tr><td><b>User Profile Type : </b></td></tr>
+            <tr><td><select ng-model="profiletype" ng-options="profiletype.ProfileTypeName for profiletype in UserProfileTypeList" ></select></td></tr>
+
+            <tr>
+                <td>
+                    <button ng-click="LoginContinue()" type="submit" class="btnsave">continue </button>
+                    <button ng-click="LoginCancel()" type="submit" class="btnsave">Cancel </button>
+                </td>
+            </tr>
+        </table>
+ 
+</div>-->
+
+<header></header>
+<!-- Intro Header -->
+<div class="intro">
+    <div class="intro-body">
+        <div class="container" ng-controller="loginController">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h1 class="brand-heading">
+                        <img src="image/logo.png" />
+                        <p class="intro-text">Welcome to Prvii</p>
+                    </h1>
+
+                    <h3>
+                        Select User Type
+                    </h3>
+                    <div class="login-form">
+                        <select ng-model="profiletype" ng-options="profiletype.ProfileTypeName for profiletype in UserProfileTypeList"></select>
+                        
+                        <div class="errorMsg"></div>
+                       
+                           
+                                <a ng-click="LoginCancel()" ><input type="button" class="cancelBtn" value="Cancel" /></a>
+                          
+                                <a ng-click="LoginContinue()" ><input type="button" value="Continue" /></a>
+                        
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+﻿<header></header>
+<!-- Intro Header -->
+<div class="intro">
+    <div class="intro-body">
+        <div class="container" ng-controller="appleIndexController">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h1 class="brand-heading">
+                        <img src="image/logo.png" />
+                        <p class="intro-text">Welcome to Prvii</p>
+                    </h1>
+
+                    <h3>
+                       Registration
+                    </h3>
+                    <div class="login-form">
+                        <form name="formUser" id="formUser" novalidate>
+                            <div class="login-form">
+                                <input placeholder="Email ID" name="EmailID" type="email" ng-model="EmailID" maxlength="100" required />
+                                <div ng-show="formUser.$submitted || formUser.EmailID.$touched">
+                                    <div ng-show="formUser.EmailID.$error.required" class="errorMsg">Please enter Email id.</div>
+                                </div>                               
+
+                                <a><input type="button" value="Continue" ng-click="Continue()" ng-disabled="formUser.$invalid" /></a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

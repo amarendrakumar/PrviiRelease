@@ -1,0 +1,106 @@
+﻿
+<div ng-controller="channelMessageEditController">
+    <form name="formMC" id="formMC" novalidate>
+        <div class="link">
+            <b>  Edit Message</b>&nbsp;|&nbsp; <a href="#/channelMessageList/{{channelId}}"> Go To Message List</a>
+        </div>
+
+        <table class="CreateMessage">
+            <tr><th>&nbsp;Subject</th></tr>
+            <tr>
+                <td>
+                    <input name="subject" type="text" ng-model="Subject" maxlength="500" required />
+                    <div ng-show="formMC.subject.$dirty">
+                        <span ng-show="formMC.subject.$error.required">Enter message subject.</span>
+                    </div>
+                </td>
+            </tr>
+            <tr><th>&nbsp;Message</th></tr>
+            <tr>
+                <td>
+                    <textarea cols="2" rows="5" ng-model="Message" required name="message"></textarea>
+                    <div ng-show="formMC.message.$dirty">
+                        <span ng-show="formMC.message.$error.required">Enter message.</span>
+                    </div>
+                </td>
+            </tr>
+            <tr><th>&nbsp;Type</th></tr>
+            <tr>
+                <td>
+                    <select ng-model="MessageTypeID" style="width:97%;" required name="messagetype">
+                        <option value="1">SMS</option>
+                        <option value="2">Email</option>
+                        <option value="3">MMS</option>
+                    </select>
+                    <div ng-show="formMC.messagetype.$dirty">
+                        <span ng-show="formMC.messagetype.$error.required">select message type.</span>
+                    </div>
+                </td>
+            </tr>
+            <tr><th>&nbsp;Attachment</th></tr>
+            <tr><td><input type="file" id="filesx" name="filesx[]" onchange="angular.element(this).scope().setFile(this)" multiple="" /></td></tr>
+            <tr>
+                <td>
+                    <ul>
+                        <li ng-repeat="file in files">
+                            {{file.name}}
+                        </li>
+                    </ul>
+                    <ul ng-if="Attachments.length>0">
+                        <li ng-repeat="file in Attachments">
+                            <a ng-click="DeleteFile(file.ID)">&Chi;</a> &nbsp;  <a ng-click="downloadFile(file.ID)">  {{file.Name}}  </a> 
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input name="radiobutton" type="radio" ng-model="IsScheduled" ng-value="false" /> Immediate Release
+                    <input name="radiobutton" type="radio" ng-model="IsScheduled" ng-value="true" />Scheduled Release
+                </td>
+            </tr>
+            <tr><th>&nbsp;Scheduled date</th></tr>
+            <tr>
+                <td>
+                    <input type="datetime-local" id="Scheduleddate" name="Scheduleddate" value="{{ScheduledOn}}" ng-model="ScheduledOn"
+                           placeholder="yyyy-MM-dd HH:mm:ss"  />
+                    <span class="error" ng-show="formMC.Scheduleddate.$error.required">
+                        Required!
+                    </span>
+                    <span class="error" ng-show="formMC.Scheduleddate.$error.date">
+                        Not a valid date!
+                    </span>
+                </td>
+            </tr>
+            <!--<tr><th>&nbsp;Scheduled Time </th></tr>
+            <tr>
+                <td>
+                  
+                    <input type="time" id="ScheduledTime" name="ScheduledTime" ng-model="TimeScheduledOn"
+                           placeholder="HH:mm:ss" min="09:00:00" max="23:00:00" required />
+                    <span class="error" ng-show="formMC.ScheduledTime.$error.required">
+                        Required!
+                    </span>
+                    <span class="error" ng-show="formMC.ScheduledTime.$error.date">
+                        Not a valid time!
+                    </span>
+                </td>
+            </tr>-->
+            <tr>
+                <td>
+                    &nbsp;
+                    <!--<input type="date"  ng-model="Sdate"  required />
+                    <input type="time" ng-model="STime" required />-->
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button ng-click="UpdateMessage()" ng-hide="Status==2" ng-disabled="formMC.$invalid">Update</button>
+                    <button ng-click="createMessage()" ng-show="Status==2" ng-disabled="formMC.$invalid">Create</button>
+                </td>
+            </tr>
+            <tr><td>&nbsp;</td></tr>
+        </table>
+        <div class="link"></div>
+    </form>
+</div>

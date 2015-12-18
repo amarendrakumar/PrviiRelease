@@ -1,0 +1,29 @@
+﻿<header></header>
+<!-- Intro Header -->
+<div class="intro">
+    <div class="intro-body">
+        <div class="container" ng-controller="appleIndexController">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h1 class="brand-heading">
+                        <img src="image/logo.png" />
+                        <p class="intro-text">Welcome to Prvii</p>
+                    </h1>
+
+                    <h3>
+                        Are you Existing User
+                    </h3>
+                    <div class="login-form">
+                        <form name="formLogin" id="formLogin" novalidate>
+                            <input type="button" class="cancelBtn" value="No" ng-click="NewUser()" />
+                            
+                            <input type="button" ng-click="ExistingUser()" value="Yes" />
+                           
+                          
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

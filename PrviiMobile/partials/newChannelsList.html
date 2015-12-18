@@ -1,0 +1,31 @@
+﻿
+<div ng-controller="newChannelsListController">
+
+   <div class="row" ng-repeat="channel in channelList">
+        <div class="col-sm-3">
+            <div class="celebrity-img">
+                <a ng-click="includeSubscriberChannelFullDetails('subscriberchannelFullDetails.html',channel.ID)"> <img ng-src="{{SERVICE_URL}}channel/GetMedia?channelID={{channel.ID}}&mediaTypeID=1" /></a>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="celebrity-name">
+                <a ng-click="includeSubscriberChannelFullDetails('subscriberchannelFullDetails.html',channel.ID)">{{channel.Name}} </a>
+
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="celebrity-name">
+                {{channel.Price | currency }}
+
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <button class="unsubscribe-btn" ng-hide="channel.ID==USER_ChannelID" ng-click="AddToCart(channel.ID)">Add To Cart</button>
+        </div>
+    </div>
+
+    <div id="space-for-AppStoreProduct">
+    </div>
+    </div>
+

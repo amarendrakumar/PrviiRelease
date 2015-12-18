@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PrviiModelStoreContainer" CdmEntityContainer="PrviiEntities">
+    <FunctionImportMapping FunctionImportName="ProcGetSubscriberStatisticsActivity" FunctionName="PrviiModel.Store.ProcGetSubscriberStatisticsActivity" />
+    <EntitySetMapping Name="ChannelMedias">
+      <EntityTypeMapping TypeName="PrviiModel.ChannelMedia">
+        <MappingFragment StoreEntitySet="ChannelMedias">
+          <ScalarProperty Name="MediaTypeID" ColumnName="MediaTypeID" />
+          <ScalarProperty Name="MimeType" ColumnName="MimeType" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ChannelID" ColumnName="ChannelID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChannelMessageAttachments">
+      <EntityTypeMapping TypeName="PrviiModel.ChannelMessageAttachment">
+        <MappingFragment StoreEntitySet="ChannelMessageAttachments">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ChannelMediaID" ColumnName="ChannelMediaID" />
+          <ScalarProperty Name="ChannelMessageID" ColumnName="ChannelMessageID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChannelSubscribers">
+      <EntityTypeMapping TypeName="PrviiModel.ChannelSubscriber">
+        <MappingFragment StoreEntitySet="ChannelSubscribers">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ETD" ColumnName="ETD" />
+          <ScalarProperty Name="EFD" ColumnName="EFD" />
+          <ScalarProperty Name="SubscriberID" ColumnName="SubscriberID" />
+          <ScalarProperty Name="ChannelID" ColumnName="ChannelID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Countries">
+      <EntityTypeMapping TypeName="PrviiModel.Country">
+        <MappingFragment StoreEntitySet="Countries">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GroupChannels">
+      <EntityTypeMapping TypeName="PrviiModel.GroupChannel">
+        <MappingFragment StoreEntitySet="GroupChannels">
+          <ScalarProperty Name="ETD" ColumnName="ETD" />
+          <ScalarProperty Name="EFD" ColumnName="EFD" />
+          <ScalarProperty Name="ChannelID" ColumnName="ChannelID" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Groups">
+      <EntityTypeMapping TypeName="PrviiModel.Group">
+        <MappingFragment StoreEntitySet="Groups">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="States">
+      <EntityTypeMapping TypeName="PrviiModel.State">
+        <MappingFragment StoreEntitySet="States">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserProfiles">
+      <EntityTypeMapping TypeName="PrviiModel.UserProfile">
+        <MappingFragment StoreEntitySet="UserProfiles">
+          <ScalarProperty Name="ChannelID" ColumnName="ChannelID" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+          <ScalarProperty Name="TimeZoneID" ColumnName="TimeZoneID" />
+          <ScalarProperty Name="NickName" ColumnName="NickName" />
+          <ScalarProperty Name="DeviceTypeID" ColumnName="DeviceTypeID" />
+          <ScalarProperty Name="DeliveryMechanisms" ColumnName="DeliveryMechanisms" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserRoles">
+      <EntityTypeMapping TypeName="PrviiModel.UserRole">
+        <MappingFragment StoreEntitySet="UserRoles">
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShoppingCarts">
+      <EntityTypeMapping TypeName="PrviiModel.ShoppingCart">
+        <MappingFragment StoreEntitySet="ShoppingCarts">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+          <ScalarProperty Name="SessionID" ColumnName="SessionID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChannelMessages">
+      <EntityTypeMapping TypeName="PrviiModel.ChannelMessage">
+        <MappingFragment StoreEntitySet="ChannelMessages">
+          <ScalarProperty Name="EmailMessage" ColumnName="EmailMessage" />
+          <ScalarProperty Name="SMSStatusID" ColumnName="SMSStatusID" />
+          <ScalarProperty Name="SentOn" ColumnName="SentOn" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="TimeZoneID" ColumnName="TimeZoneID" />
+          <ScalarProperty Name="ScheduledOn" ColumnName="ScheduledOn" />
+          <ScalarProperty Name="IsScheduled" ColumnName="IsScheduled" />
+          <ScalarProperty Name="SendByEmail" ColumnName="SendByEmail" />
+          <ScalarProperty Name="SendBySMS" ColumnName="SendBySMS" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="SendToAll" ColumnName="SendToAll" />
+          <ScalarProperty Name="ChannelID" ColumnName="ChannelID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShoppingCartItems">
+      <EntityTypeMapping TypeName="PrviiModel.ShoppingCartItem">
+        <MappingFragment StoreEntitySet="ShoppingCartItems">
+          <ScalarProperty Name="PaymentMode" ColumnName="PaymentMode" />
+          <ScalarProperty Name="ProfileStatus" ColumnName="ProfileStatus" />
+          <ScalarProperty Name="ErrorCode" ColumnName="ErrorCode" />
+          <ScalarProperty Name="TotalBillingCycles" ColumnName="TotalBillingCycles" />
+          <ScalarProperty Name="BillingFrequency" ColumnName="BillingFrequency" />
+          <ScalarProperty Name="BillingPeriodID" ColumnName="BillingPeriodID" />
+          <ScalarProperty Name="BillingStartDate" ColumnName="BillingStartDate" />
+          <ScalarProperty Name="PaymentProfileID" ColumnName="PaymentProfileID" />
+          <ScalarProperty Name="PaymentStatusID" ColumnName="PaymentStatusID" />
+          <ScalarProperty Name="PayerId" ColumnName="PayerId" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="ChannelID" ColumnName="ChannelID" />
+          <ScalarProperty Name="ShoppingCartID" ColumnName="ShoppingCartID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaymentRecons">
+      <EntityTypeMapping TypeName="PrviiModel.PaymentRecon">
+        <MappingFragment StoreEntitySet="PaymentRecon">
+          <ScalarProperty Name="ReconPick" ColumnName="ReconPick" />
+          <ScalarProperty Name="AlertCode" ColumnName="AlertCode" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastPmtAmt" ColumnName="LastPmtAmt" />
+          <ScalarProperty Name="LastPmtDate" ColumnName="LastPmtDate" />
+          <ScalarProperty Name="FailedPmtCount" ColumnName="FailedPmtCount" />
+          <ScalarProperty Name="CyclesRemaining" ColumnName="CyclesRemaining" />
+          <ScalarProperty Name="CyclesCompleted" ColumnName="CyclesCompleted" />
+          <ScalarProperty Name="TotalCycles" ColumnName="TotalCycles" />
+          <ScalarProperty Name="NextBillDate" ColumnName="NextBillDate" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="CycleAmount" ColumnName="CycleAmount" />
+          <ScalarProperty Name="ProfileStartDate" ColumnName="ProfileStartDate" />
+          <ScalarProperty Name="FinalPaymentDueDate" ColumnName="FinalPaymentDueDate" />
+          <ScalarProperty Name="AggregateAmount" ColumnName="AggregateAmount" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ProfileId" ColumnName="ProfileId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReconErrorLogs">
+      <EntityTypeMapping TypeName="PrviiModel.ReconErrorLog">
+        <MappingFragment StoreEntitySet="ReconErrorLog">
+          <ScalarProperty Name="ErrorCode" ColumnName="ErrorCode" />
+          <ScalarProperty Name="ErrorMessage" ColumnName="ErrorMessage" />
+          <ScalarProperty Name="ReconDate" ColumnName="ReconDate" />
+          <ScalarProperty Name="ProfileId" ColumnName="ProfileId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChannelSubscriberMessages">
+      <EntityTypeMapping TypeName="PrviiModel.ChannelSubscriberMessage">
+        <MappingFragment StoreEntitySet="ChannelSubscriberMessages">
+          <ScalarProperty Name="IsMMS" ColumnName="IsMMS" />
+          <ScalarProperty Name="SMSErrorCode" ColumnName="SMSErrorCode" />
+          <ScalarProperty Name="MessageSID" ColumnName="MessageSID" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="SMSCost" ColumnName="SMSCost" />
+          <ScalarProperty Name="EmailStatus" ColumnName="EmailStatus" />
+          <ScalarProperty Name="SMSStatus" ColumnName="SMSStatus" />
+          <ScalarProperty Name="SMSDeliveredOn" ColumnName="SMSDeliveredOn" />
+          <ScalarProperty Name="TimeZoneID" ColumnName="TimeZoneID" />
+          <ScalarProperty Name="DeliveredOn" ColumnName="DeliveredOn" />
+          <ScalarProperty Name="ChannelMessageID" ColumnName="ChannelMessageID" />
+          <ScalarProperty Name="ChannelSubscriberID" ColumnName="ChannelSubscriberID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Channels">
+      <EntityTypeMapping TypeName="PrviiModel.Channel">
+        <MappingFragment StoreEntitySet="Channels">
+          <ScalarProperty Name="PriceManagement" ColumnName="PriceManagement" />
+          <ScalarProperty Name="Preclude" ColumnName="Preclude" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="TimeZoneID" ColumnName="TimeZoneID" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="NoOfBillingPeriod" ColumnName="NoOfBillingPeriod" />
+          <ScalarProperty Name="BillingCycleID" ColumnName="BillingCycleID" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrviiAccountMasters">
+      <EntityTypeMapping TypeName="PrviiModel.PrviiAccountMaster">
+        <MappingFragment StoreEntitySet="PrviiAccountMaster">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="LevelID" ColumnName="LevelID" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrviiChannelAccountings">
+      <EntityTypeMapping TypeName="PrviiModel.PrviiChannelAccounting">
+        <MappingFragment StoreEntitySet="PrviiChannelAccounting">
+          <ScalarProperty Name="Percentage" ColumnName="Percentage" />
+          <ScalarProperty Name="Mode" ColumnName="Mode" />
+          <ScalarProperty Name="AccountId" ColumnName="AccountId" />
+          <ScalarProperty Name="ChannelId" ColumnName="ChannelId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrviiTransactions">
+      <EntityTypeMapping TypeName="PrviiModel.PrviiTransaction">
+        <MappingFragment StoreEntitySet="PrviiTransaction">
+          <ScalarProperty Name="TrnDate" ColumnName="TrnDate" />
+          <ScalarProperty Name="AmountDetails" ColumnName="AmountDetails" />
+          <ScalarProperty Name="ChannelId" ColumnName="ChannelId" />
+          <ScalarProperty Name="SubscriberId" ColumnName="SubscriberId" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserDeviceInfoes">
+      <EntityTypeMapping TypeName="PrviiModel.UserDeviceInfo">
+        <MappingFragment StoreEntitySet="UserDeviceInfo">
+          <ScalarProperty Name="DeviceToken" ColumnName="DeviceToken" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="DeviceVersion" ColumnName="DeviceVersion" />
+          <ScalarProperty Name="DeviceId" ColumnName="DeviceId" />
+          <ScalarProperty Name="DevicePaltform" ColumnName="DevicePaltform" />
+          <ScalarProperty Name="DeviceCordova" ColumnName="DeviceCordova" />
+          <ScalarProperty Name="SubscriberId" ColumnName="SubscriberId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IosTransactionLogs">
+      <EntityTypeMapping TypeName="PrviiModel.IosTransactionLog">
+        <MappingFragment StoreEntitySet="IosTransactionLog">
+          <ScalarProperty Name="TransactionDetails" ColumnName="TransactionDetails" />
+          <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+          <ScalarProperty Name="ShoppingCartItemsID" ColumnName="ShoppingCartItemsID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransactionReconDetails">
+      <EntityTypeMapping TypeName="PrviiModel.TransactionReconDetail">
+        <MappingFragment StoreEntitySet="TransactionReconDetails">
+          <ScalarProperty Name="ChannelName" ColumnName="ChannelName" />
+          <ScalarProperty Name="SubscriberId" ColumnName="SubscriberId" />
+          <ScalarProperty Name="ChannelId" ColumnName="ChannelId" />
+          <ScalarProperty Name="PriceDistribution" ColumnName="PriceDistribution" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="ProfileId" ColumnName="ProfileId" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="PayerDisplayName" ColumnName="PayerDisplayName" />
+          <ScalarProperty Name="NetAmount" ColumnName="NetAmount" />
+          <ScalarProperty Name="FeeAmount" ColumnName="FeeAmount" />
+          <ScalarProperty Name="GrossAmount" ColumnName="GrossAmount" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="PROC_GetProfileIdsforRecon" FunctionName="PrviiModel.Store.PROC_GetProfileIdsforRecon" />
+    <FunctionImportMapping FunctionImportName="PROC_GetProfileIdsforRecon1" FunctionName="PrviiModel.Store.PROC_GetProfileIdsforRecon" />
+    <FunctionImportMapping FunctionImportName="ProcGetCelebrityRevenueReport" FunctionName="PrviiModel.Store.ProcGetCelebrityRevenueReport" />
+    <FunctionImportMapping FunctionImportName="ProcGetCelebrityRevenueReport1" FunctionName="PrviiModel.Store.ProcGetCelebrityRevenueReport" />
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,38 @@
+﻿<div ng-controller="channelSubscriberPastWeekMessageListController">
+
+    <div class="row">
+        <div class="msg-search-filter">
+            <!-- Filter Row-->
+            <div class="row">
+                <div class="col-sm-3 col-xs-6">
+                    Past <input type="number" min="0" max="10" ng-model="WeekNo" style="width:40px;" /> Weeks
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <button type="button" class="" ng-click="SearchPastMessage()">Search</button>
+                </div>
+            </div>
+        </div>
+        <div class="" style="padding:0 2px;">
+            <table class="table-responsive">
+                <tr>
+                    <th><a href="" ng-click="predicate = 'SentOn'; reverse=!reverse"> Date</a></th>
+                    <th><a href="" ng-click="predicate = 'TimeZoneID'; reverse=!reverse"> TimeZoneID</a></th>
+                    <th><a href="" ng-click="predicate = 'Subject'; reverse=!reverse">Subject</a></th>
+                    <!--<th><a href="" ng-click="predicate = 'Message'; reverse=!reverse">Message</a></th>-->
+                    <th></th>
+                </tr>
+                <tr ng-repeat="channelMessage in channelMessageList |orderBy: predicate:reverse">
+                    <td>{{channelMessage.SentOn | date: 'YYYY-MM-dd : h:mm:ss a' }}</td>
+                    <td>{{channelMessage.TimeZoneID}}</td>
+                    <td>{{channelMessage.Subject}}</td>
+                    <!--<td>{{channelMessage.Message}}</td>-->
+                    <td>
+
+                        <a ng-click="includeSubscriberMessageDetailsViewPastWeek('subscriberMessageView.html',channelMessage.ID)">View</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        </div>
+
+</div>

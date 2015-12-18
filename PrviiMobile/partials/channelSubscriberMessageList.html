@@ -1,0 +1,47 @@
+﻿<!--<div ng-include="'partials/header.html'"></div>-->
+<div ng-controller="channelSubscriberMessageListController" >
+
+    <div class="msg-search-filter">
+        <!-- Filter Row-->
+        <div class="row">
+            <div class="col-sm-3 col-xs-12">
+                <b>Date Range</b>
+            </div>
+            <div class="col-sm-4 col-xs-6">From <input type="date" name="Fromdate" ng-model="FromDate" placeholder="yyyy-MM-dd" value={{Fromdate}} /></div>
+            <div class="col-sm-4 col-xs-6">To <input type="date" name="Todate" ng-model="ToDate" placeholder="yyyy-MM-dd" value={{ToDate}} /></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3 col-xs-3">
+                Message:
+            </div>
+            <div class="col-sm-9 col-xs-9">
+                <input type="text" name="SearchText" ng-model="SearchText" style="width:100%; color:#000000;" value="{{SearchText}}" />
+                <i ng-click="Searchrecult()" class="fa fa-search"></i>
+                <input type="button" value="Search" ng-click="Searchrecult()" />
+                <!--<a > <img src="images/search.png" style="height:30px;width:30px;" /> </a>-->
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="" style="padding:0 2px;">
+    
+            <table class="table-responsive">
+                <tr>
+                    <th><a href="" ng-click="predicate = 'ScheduledOn'; reverse=!reverse"> Date</a></th>
+                    <th><a href="" ng-click="predicate = 'TimeZoneID'; reverse=!reverse"> TimeZoneID</a></th>
+                    <th><a href="" ng-click="predicate = 'Subject'; reverse=!reverse">Subject</a></th>
+                    <th></th>
+                </tr>
+                <tr ng-repeat="channelMessage in channelMessageList |orderBy: predicate:reverse">
+                    <td>{{channelMessage.ScheduledOn | date: 'YYYY-MM-dd : h:mm:ss a' }}</td>
+                    <td>{{channelMessage.Subject}}</td>
+                    <td>{{channelMessage.TimeZoneID}}</td>
+                    <td>
+                        <a ng-click="includeSubscriberMessageDetailsViewSearch('subscriberMessageView.html',channelMessage.ID)">View</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

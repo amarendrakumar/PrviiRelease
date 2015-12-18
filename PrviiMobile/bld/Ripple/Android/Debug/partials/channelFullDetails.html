@@ -1,0 +1,30 @@
+﻿<div ng-controller="channelDetailsController">
+<!--<table>
+        <tr>
+            <td>
+                <samp class="image100"><img ng-src="{{SERVICE_URL}}channel/GetMedia?channelID={{channelDetails.ID}}&mediaTypeID=2" /> </samp>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <samp class="image100">
+                    <img ng-src="{{SERVICE_URL}}channel/GetMedia?channelID={{channelDetails.ID}}&mediaTypeID=5" />
+                </samp>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <samp class="image100"> <img ng-src="{{SERVICE_URL}}channel/GetMedia?channelID={{channelDetails.ID}}&mediaTypeID=4" /> </samp>
+            </td>
+        </tr>
+    </table>-->
+    <div class="col-md-12">
+        <br />
+        <img ng-src="{{SERVICE_URL}}channel/GetMedia?channelID={{channelDetails.ID}}&mediaTypeID=2" style="width:100%;" />
+        <br />
+        <img ng-src="{{SERVICE_URL}}channel/GetMedia?channelID={{channelDetails.ID}}&mediaTypeID=5" style="width:100%;" />
+        <br />
+        <img ng-src="{{SERVICE_URL}}channel/GetMedia?channelID={{channelDetails.ID}}&mediaTypeID=4" style="width:100%;" />
+
+    </div>
+</div> 

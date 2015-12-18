@@ -1,0 +1,30 @@
+﻿
+<div ng-controller="subscriberMessageViewController">
+    <div class="row">       
+        <div class="" style="padding:0 2px;">
+            <b style="text-align:center;">  Message Details</b>
+            <table class="table-responsive">
+                <tr><th>&nbsp;Subject</th></tr>
+                <tr><td>{{MessageView.Subject}}</td></tr>
+                <tr><th>&nbsp;Message</th></tr>
+                <tr><td>{{MessageView.Message}}</td></tr>
+                <tr><th>&nbsp;Scheduled date</th></tr>
+                <tr>
+                    <td>
+                        {{MessageView.ScheduledOn | date: 'YYYY-MM-dd : hh:mm:ss'}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>TimeZoneID</td>
+                </tr>
+                <tr>
+                    <td>{{MessageView.TimeZoneID}}</td>
+                </tr>
+                <tr><td>&nbsp;</td></tr>
+
+            </table>
+
+
+        </div>
+        </div>
+   </div>

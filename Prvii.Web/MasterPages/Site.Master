@@ -1,0 +1,186 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Prvii.Web.MasterPages.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="Globrin System & Solutions Ltd. Amarendra Kumar Amar " />
+
+    <title>Prvii</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link href="~/css/style.css" rel="stylesheet" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <%--<link href="../Styles/Site.css" rel="stylesheet" />--%>
+    <link rel="icon" href="../Images/favicon.ico" type="image/x-icon" />
+</head>
+<body runat="server" id="pageBody">
+    <form id="form1" runat="server">
+        <ajaxToolkit:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server" EnableScriptGlobalization="true"></ajaxToolkit:ToolkitScriptManager>
+      <%--  <table class="header_table">
+            <tr>
+                <td style="width: 8%"></td>
+                <td style="width: 10%; vertical-align: top; text-align: left">
+                    <img runat="server" alt="Prvii Celebrity Service" src="~/Images/logo.png" style="width: 130px; height: 49px; margin-top: 5px;" />
+                </td>
+                <td style="width: 52%; white-space: nowrap">
+                    <asp:Menu ID="mnuSite" runat="server" Orientation="Horizontal" StaticEnableDefaultPopOutImage="false" SkipLinkText="">
+                        <Items>
+                            <asp:MenuItem Text="Celebrities" NavigateUrl="~/WebPages/Channels/ChannelList.aspx" />
+                            <asp:MenuItem Text="Cart" NavigateUrl="~/WebPages/ShoppingCarts/ShoppingCartList.aspx" />
+                            <asp:MenuItem Text="Reports" Selectable="false">
+                                <asp:MenuItem Text="Message" NavigateUrl="~/WebPages/ChannelMessages/ChannelMessageReport.aspx" />
+                                <asp:MenuItem Text="Subscriber" NavigateUrl="~/WebPages/ChannelSubscribers/ChannelSubscriberStatistics.aspx" />
+                                 <asp:MenuItem Text="Subsciber Download" NavigateUrl="~/WebPages/ChannelSubscribers/DownloadSubsciber.aspx" />
+                                
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Manage" Selectable="false">
+                                <asp:MenuItem Text="Celebrities" NavigateUrl="~/WebPages/Channels/ChannelList.aspx" />
+                                <asp:MenuItem Text="Groups" NavigateUrl="~/WebPages/Groups/GroupList.aspx" />
+                                <asp:MenuItem Text="Users" NavigateUrl="~/WebPages/Users/UserList.aspx" />
+                            </asp:MenuItem>
+                        </Items>
+                        <LevelMenuItemStyles>
+                            <asp:MenuItemStyle CssClass="main_menu" />
+                            <asp:MenuItemStyle CssClass="level_menu" />
+                        </LevelMenuItemStyles>
+                    </asp:Menu>
+                </td>
+                <td style="width: 22%; white-space: nowrap;text-align:right">
+                    <div class="login_info" >
+                        Welcome,
+                        
+                        |
+                        <asp:HyperLink ID="hlAccountSettings" runat="server" ForeColor="White" Text="Account Setting" />
+                        |
+                        <asp:LinkButton ID="lbtnLogout" runat="server" ForeColor="White" Text="Logout" CausesValidation="false" OnClick="lbtnLogout_Click" />
+                    </div>
+                    <div class="login_info" runat="server" id="divLogin">
+                        <a runat="server" href="~/WebPages/Login.aspx" style="color: white">Login</a> | <a runat="server" href="~/WebPages/Users/UserDetails.aspx" style="color: white">Register</a>
+                    </div>
+                </td>
+                <td style="width: 8%"></td>
+            </tr>
+        </table>--%>
+       
+        <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img alt="Prvii Celebrity Service" src="~/Images/logo.png" runat="server" />
+                </a>
+				</div>
+
+             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                     <li runat="server" id="Celebrities">                       
+                          <asp:HyperLink ID="CelebritiesLink" runat="server" NavigateUrl="~/WebPages/Channels/ChannelList.aspx" Text="Celebrities"></asp:HyperLink>
+                    </li>
+                    <li  runat="server" id="Cart">
+                        <asp:HyperLink ID="hypcart" runat="server" NavigateUrl="~/WebPages/ShoppingCarts/ShoppingCartList.aspx" Text="Cart"></asp:HyperLink>
+                       
+                    </li>
+                     <li  runat="server" id="RevenueReport">
+                        <asp:HyperLink ID="hypRevenueReport" runat="server" NavigateUrl="~/WebPages/ChannelSubscribers/RevenueReporting.aspx" Text="Revenue Reporting"></asp:HyperLink>
+                       
+                    </li>
+                    <li  runat="server" id="Reports" >
+						<div class="dropdown">
+							<a class="main-link dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Reports</a>
+							<span class="caret"></span>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">							
+                                <li role="presentation">
+                                     <asp:HyperLink ID="HyperLink4" runat="server" role="menuitem" tabindex="-1" NavigateUrl="~/WebPages/ChannelMessages/ChannelMessageReport.aspx" >Messages</asp:HyperLink>
+                                </li>
+							  <li role="presentation">
+                                   <asp:HyperLink ID="HyperLink3" runat="server" role="menuitem" tabindex="-1" NavigateUrl="~/WebPages/ChannelSubscribers/ChannelSubscriberStatistics.aspx" >Subscriber</asp:HyperLink>
+							  </li>
+                              <li role="presentation">
+                                   <asp:HyperLink ID="HyperLink2" runat="server" role="menuitem" tabindex="-1" NavigateUrl="~/WebPages/ChannelSubscribers/DownloadSubsciber.aspx" >Subsciber Download</asp:HyperLink>
+                              </li>
+                              <li role="presentation"> 
+                                  <asp:HyperLink ID="HyperLink1" runat="server" role="menuitem" tabindex="-1" NavigateUrl="~/WebPages/ChannelSubscribers/RevenueReporting.aspx" >Revenue Reporting</asp:HyperLink>
+                              </li>
+							</ul>
+						  </div>
+                    </li>
+					<li runat="server" id="Manage">
+						<div class="dropdown">
+							<a class="main-link dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Manage</a>
+							<span class="caret"></span>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+							 <li role="presentation">
+                                 <asp:HyperLink ID="HyperLink7" runat="server" role="menuitem" tabindex="-1" NavigateUrl="~/WebPages/Channels/ChannelList.aspx" >Celebrities</asp:HyperLink>
+							 </li>
+							  <li role="presentation">
+                                  <asp:HyperLink ID="HyperLink6" runat="server" role="menuitem" tabindex="-1" NavigateUrl="~/WebPages/Groups/GroupList.aspx" >Groups</asp:HyperLink>
+							  </li>
+							  <li role="presentation">
+                               <asp:HyperLink ID="HyperLink5" runat="server" role="menuitem" tabindex="-1" NavigateUrl="~/WebPages/Users/UserList.aspx" >Users</asp:HyperLink>
+							  </li>
+							</ul>
+						  </div>
+                    </li>
+					<li>
+                        <asp:HyperLink ID="hypLoginAccount" runat="server" ></asp:HyperLink>
+                    </li>
+                    <li>
+                        <asp:HyperLink ID="HypLogout" runat="server" NavigateUrl="~/WebPages/Logout.aspx" Visible="false" > Logout </asp:HyperLink>
+                        <asp:HyperLink ID="HypRegistration" runat="server" NavigateUrl="~/WebPages/Users/UserDetails.aspx"  > Register </asp:HyperLink>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            <div class="user-name" runat="server" id="divLoggedUser" visible="false" > Welcome, <asp:Label ID="lblUsername" runat="server" Text="" /></div>
+        </div>
+        
+    </nav>
+
+                   <div class="container after-login">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+               
+       
+        <!-- footer-->
+		<footer>
+			  <div class="container">
+					<div class="footer"> &copy; <%: DateTime.Now.Year %> - Verify Smart Corp - All Rights Reserved</div>
+			  </div>
+		</footer>
+	<!-- /footer>
+	
+    <!-- jQuery -->
+    <script src="../js/jquery.js"></script>
+         <script src="../../js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+         <script src="../../js/bootstrap.min.js"></script>
+    </form>
+</body>
+</html>

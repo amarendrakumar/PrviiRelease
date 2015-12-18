@@ -1,0 +1,259 @@
+﻿<div ng-include="'partials/header.html'"></div>
+<!--<div ng-controller="userProfileEditController">
+    <div class="link">Account Edit </div>
+    <form name="formUser" id="formUser " novalidate>
+        <table class="CreateMessage">
+            <tr><td><b>Nick Name :</b> </td></tr>
+            <tr><td><input name="NickName" type="text" ng-model="NickName" maxlength="50"  /> </td></tr>
+            <tr><td><b>First Name :</b> </td></tr>
+            <tr><td><input name="Firstname" type="text" ng-model="Firstname" maxlength="50" required /> 
+                    <div ng-show="formUser.$submitted || formUser.Firstname.$touched " class="errorMsg">
+                        <div ng-show="formUser.Firstname.$error.required">Please Enter Frist Name.</div>
+                    </div>
+                </td></tr>
+            <tr><td><b>Last Name :</b></td></tr>
+            <tr><td><input name="Lastname" type="text" ng-model="Lastname" maxlength="50" required />
+                    <div ng-show="formUser.$submitted || formUser.Lastname.$touched " class="errorMsg">
+                        <div ng-show="formUser.Lastname.$error.required">Please Enter Last Name.</div>
+                    </div>
+                 </td></tr>
+            <tr><td><b>Email :</b></td></tr>
+            <tr><td><input name="Email" type="text" ng-model="Email" maxlength="50" required />
+                    <div ng-show="formUser.$submitted || formUser.Email.$touched " class="errorMsg">
+                        <div ng-show="formUser.Email.$error.required">Please Enter email Id.</div>
+                    </div>
+                 </td></tr>
+            <tr><td><b>Mobile : </b></td></tr>
+            <tr><td><input name="Mobile" type="text" ng-model="Mobile" maxlength="10" required />
+                    <div ng-show="formUser.$submitted || formUser.Mobile.$touched " class="errorMsg">
+                        <div ng-show="formUser.Mobile.$error.required">Please Enter mobile no.</div>
+                    </div>
+                 </td></tr>
+            <tr><td><b>Telephone :</b> </td></tr>
+            <tr><td><input name="Telephone" type="text" ng-model="Telephone" maxlength="15" /> </td></tr>
+            <tr><td><b>Country : </b></td></tr>
+            <tr><td>
+                    <select ng-model="country" ng-options="country.ID as country.Name for country in countrys" ng-change="changeStateBind();" required>
+                        <option value="0">--Select--</option>
+                    </select>                
+                </td></tr>
+            <tr><td><b>State : </b></td></tr>
+            <tr><td>
+                    <select ng-model="state" ng-options="state.ID as state.Name for state in states" required>
+                        <option value="0">--Select--</option>
+                    </select>
+                   
+                </td></tr>
+            <tr><td><b>City : </b></td></tr>
+            <tr><td><input name="city" type="text" ng-model="City" maxlength="50" />               
+                </td></tr>
+            <tr><td><b>Zip Code : </b></td></tr>
+            <tr><td><input name="ZipCode" type="text" ng-model="ZipCode" maxlength="10" required /> 
+                    <div ng-show="formUser.$submitted || formUser.ZipCode.$touched " class="errorMsg">
+                        <div ng-show="formUser.ZipCode.$error.required">Please Enter zip code.</div>
+                    </div>
+                </td></tr>
+            <tr><td><b>Address1 : </b></td></tr>
+            <tr><td><textarea cols="2" rows="3" ng-model="Address1" required name="Address1" ></textarea> </td></tr>
+            <tr><td><b>Address2 : </b></td></tr>
+            <tr><td><textarea name="Address2" type="text" ng-model="Address2" cols="2" rows="3" ></textarea> </td></tr>
+            <tr>
+                <td>
+                    <button ng-click="UpdateUserDetails()" type="submit" class="btnsave" ng-disabled="formUser.$invalid">UPDATE</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <div class="link"><a href="#/ViewProfile">Account Setting</a> </div>
+</div>-->
+
+<!-- Intro Header -->
+<div class="intro">
+    <div class="after-login" ng-controller="userProfileEditController">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            <h3>Account Edit</h3>
+                            <div class="setting-table">
+                                <div>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="setting-label">Nick Name</div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="setting-field">
+                                                <input name="NickName" type="text" ng-model="NickName" maxlength="50" />
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="setting-label">First Name</div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="setting-field">
+                                                <input name="Firstname" type="text" ng-model="Firstname" maxlength="50" required />
+                                                <div ng-show="formUser.$submitted || formUser.Firstname.$touched " class="errorMsg">
+                                                    <div ng-show="formUser.Firstname.$error.required">Please Enter Frist Name.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="setting-label">Last Name</div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="setting-field">
+                                                <input name="Lastname" type="text" ng-model="Lastname" maxlength="50" required />
+                                                <div ng-show="formUser.$submitted || formUser.Lastname.$touched " class="errorMsg">
+                                                    <div ng-show="formUser.Lastname.$error.required">Please Enter Last Name.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="setting-label">Email</div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="setting-field">
+
+                                                <input name="Email" type="text" ng-model="Email" maxlength="50" required />
+                                                <div ng-show="formUser.$submitted || formUser.Email.$touched " class="errorMsg">
+                                                    <div ng-show="formUser.Email.$error.required">Please Enter email Id.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="setting-label">Telephone</div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="setting-field">
+                                                <input name="Telephone" type="text" ng-model="Telephone" maxlength="15" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="setting-label">Mobile</div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="setting-field">
+                                                <input name="Mobile" type="text" ng-model="Mobile" maxlength="10" required />
+                                                <div ng-show="formUser.$submitted || formUser.Mobile.$touched " class="errorMsg">
+                                                    <div ng-show="formUser.Mobile.$error.required">Please Enter mobile no.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="setting-label">Country</div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="setting-field">
+                                                <select ng-model="country" ng-options="country.ID as country.Name for country in countrys" ng-change="changeStateBind();" required>
+                                                    <option value="0">--Select--</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="setting-label">State</div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="setting-field">
+                                                <select ng-model="state" ng-options="state.ID as state.Name for state in states" required>
+                                                    <option value="0">--Select--</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="setting-label">City</div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="setting-field">
+                                                <input name="city" type="text" ng-model="City" maxlength="50" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="setting-label">Zip Code</div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="setting-field">
+                                                <input name="ZipCode" type="text" ng-model="ZipCode" maxlength="10" required />
+                                                <div ng-show="formUser.$submitted || formUser.ZipCode.$touched " class="errorMsg">
+                                                    <div ng-show="formUser.ZipCode.$error.required">Please Enter zip code.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="setting-label">Address1</div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="setting-field">
+                                                <textarea cols="2" rows="3" ng-model="Address1" required name="Address1"></textarea>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="setting-label">Address2</div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="setting-field">
+                                                <textarea name="Address2" type="text" ng-model="Address2" cols="2" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row cart-buttons">
+                                        <div class="col-xs-4">
+                                            <a href="#/ViewProfile"><input type="button" class="btn btn-default" value="Account Setting" /></a>
+                                        </div>
+
+                                        <div class="col-xs-8 text-right">
+
+                                            <button ng-click="UpdateUserDetails()" type="submit" class="btn btn-default" ng-disabled="formUser.$invalid">UPDATE</button>
+
+                                            <a href="#/ViewProfile"><input type="button" class="btn btn-default cancelBtn" value="cancel" /></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,541 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{136C929D-A7F9-4C8A-80F2-3B3DAB0C9D23}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Prvii.Web</RootNamespace>
+    <AssemblyName>Prvii.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
+    <ExcludeGeneratedDebugSymbol>true</ExcludeGeneratedDebugSymbol>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\packages\AjaxControlToolkit.7.1213\lib\45\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxMin">
+      <HintPath>..\packages\AjaxMin.4.97.4951.28483\lib\net40\AjaxMin.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.6\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Edm, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Data.Edm.5.2.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Data.OData.5.2.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Configuration">
+      <HintPath>..\packages\Microsoft.WindowsAzure.ConfigurationManager.1.8.0.0\lib\net35-full\Microsoft.WindowsAzure.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Storage">
+      <HintPath>..\packages\WindowsAzure.Storage.2.1.0.3\lib\net40\Microsoft.WindowsAzure.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PushSharp.Amazon.Adm, Version=2.2.1.0, Culture=neutral, PublicKeyToken=cf74b75eab2c0170, processorArchitecture=MSIL">
+      <HintPath>..\packages\PushSharp.2.2.1.0\lib\net40\PushSharp.Amazon.Adm.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PushSharp.Android, Version=2.2.1.0, Culture=neutral, PublicKeyToken=cf74b75eab2c0170, processorArchitecture=MSIL">
+      <HintPath>..\packages\PushSharp.2.2.1.0\lib\net40\PushSharp.Android.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PushSharp.Apple, Version=2.2.1.0, Culture=neutral, PublicKeyToken=cf74b75eab2c0170, processorArchitecture=MSIL">
+      <HintPath>..\packages\PushSharp.2.2.1.0\lib\net40\PushSharp.Apple.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PushSharp.Blackberry, Version=2.2.1.0, Culture=neutral, PublicKeyToken=cf74b75eab2c0170, processorArchitecture=MSIL">
+      <HintPath>..\packages\PushSharp.2.2.1.0\lib\net40\PushSharp.Blackberry.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PushSharp.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=cf74b75eab2c0170, processorArchitecture=MSIL">
+      <HintPath>..\packages\PushSharp.2.2.1.0\lib\net40\PushSharp.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PushSharp.FirefoxOS, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\PushSharp.2.2.1.0\lib\net40\PushSharp.FirefoxOS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PushSharp.Google.Chrome, Version=2.2.1.0, Culture=neutral, PublicKeyToken=cf74b75eab2c0170, processorArchitecture=MSIL">
+      <HintPath>..\packages\PushSharp.2.2.1.0\lib\net40\PushSharp.Google.Chrome.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PushSharp.Windows, Version=2.2.1.0, Culture=neutral, PublicKeyToken=cf74b75eab2c0170, processorArchitecture=MSIL">
+      <HintPath>..\packages\PushSharp.2.2.1.0\lib\net40\PushSharp.Windows.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PushSharp.WindowsPhone, Version=2.2.1.0, Culture=neutral, PublicKeyToken=cf74b75eab2c0170, processorArchitecture=MSIL">
+      <HintPath>..\packages\PushSharp.2.2.1.0\lib\net40\PushSharp.WindowsPhone.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.28.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.28\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.28.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.28\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Spatial, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\System.Spatial.5.2.0\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\style.css" />
+    <Content Include="EmailTemplates\Feedback.htm" />
+    <Content Include="EmailTemplates\ForgetPassword.htm" />
+    <Content Include="EmailTemplates\ScheduledMessage.html" />
+    <Content Include="EmailTemplates\SubscriptionMessage.htm" />
+    <Content Include="EmailTemplates\SubscriptionWelcomeMessage.htm" />
+    <Content Include="ErrorPage.aspx" />
+    <Content Include="Flowplayer\flowplayer-3.2.13.min.js" />
+    <Content Include="Flowplayer\flowplayer-3.2.18.swf" />
+    <Content Include="Flowplayer\flowplayer.controls-3.2.16.swf" />
+    <Content Include="Flowplayer\flowplayer.pseudostreaming-3.2.13.swf" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\amex.gif" />
+    <Content Include="Images\asc.png" />
+    <Content Include="Images\desc.png" />
+    <Content Include="Images\discover.gif" />
+    <Content Include="Images\echeck.gif" />
+    <Content Include="Images\excel-icon.png" />
+    <Content Include="Images\favicon.ico" />
+    <Content Include="Images\favicon.png" />
+    <Content Include="Images\indicator.gif" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\mastercard.gif" />
+    <Content Include="Images\minus.png" />
+    <Content Include="Images\payment.png" />
+    <Content Include="Images\paypal.gif" />
+    <Content Include="Images\paypal.png" />
+    <Content Include="Images\PDF-icon.png" />
+    <Content Include="Images\plus.png" />
+    <Content Include="Images\prvii.jpg" />
+    <Content Include="Images\verifySmart.jpg" />
+    <Content Include="Images\visa.gif" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\jquery-1.11.3.min.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="Maintenance.aspx" />
+    <Content Include="MasterPages\Site.Master" />
+    <Content Include="test.aspx" />
+    <Content Include="WebPages\ChannelMessages\ChannelMessageDetails.aspx" />
+    <Content Include="WebPages\ChannelMessages\ChannelMessageList.aspx" />
+    <Content Include="WebPages\ChannelMessages\ChannelMessageReport.aspx" />
+    <Content Include="WebPages\ChannelSubscribers\ChannelSubscriberStatistics.aspx" />
+    <Content Include="WebPages\ChannelSubscribers\DownloadSubsciber.aspx" />
+    <Content Include="WebPages\ChannelSubscribers\RevenueReporting.aspx" />
+    <Content Include="WebPages\Channels\CelebrityPriceManagement.aspx" />
+    <Content Include="WebPages\Channels\ChannelDetailsEdit.aspx" />
+    <Content Include="WebPages\Channels\ChannelDetailsView.aspx" />
+    <Content Include="WebPages\Channels\ChannelList.aspx" />
+    <Content Include="WebPages\Channels\index.html" />
+    <Content Include="WebPages\GetChannelMedia.aspx" />
+    <Content Include="WebPages\Groups\GroupDetails.aspx" />
+    <Content Include="WebPages\Groups\GroupList.aspx" />
+    <Content Include="WebPages\Login.aspx" />
+    <Content Include="WebPages\Logout.aspx" />
+    <Content Include="WebPages\MMSChannelMediaURL.aspx" />
+    <Content Include="WebPages\ShoppingCarts\checkout.aspx" />
+    <Content Include="WebPages\ShoppingCarts\CheckoutCancel.aspx" />
+    <Content Include="WebPages\ShoppingCarts\CheckoutCancelMobile.aspx" />
+    <Content Include="WebPages\ShoppingCarts\CheckoutComplete.aspx" />
+    <Content Include="WebPages\ShoppingCarts\CheckoutCompleteMobile.aspx" />
+    <Content Include="WebPages\ShoppingCarts\CheckoutIPNHandler.aspx" />
+    <Content Include="WebPages\ShoppingCarts\CheckoutStart.aspx" />
+    <Content Include="WebPages\ShoppingCarts\ShoppingCartList.aspx" />
+    <Content Include="WebPages\Users\UserDetails.aspx" />
+    <Content Include="WebPages\Users\UserList.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="WebPages\Users\UserPasswordReset.aspx" />
+    <Content Include="WebPages\ViewChannelMediaURL.aspx" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="Properties\PublishProfiles\local.pubxml" />
+    <Content Include="pushkeyDev.p12" />
+    <Content Include="pushkeyDistribution.p12" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="Images\logo1.png" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppCode\BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Device.cs" />
+    <Compile Include="ErrorPage.aspx.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.designer.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance.aspx.cs">
+      <DependentUpon>Maintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance.aspx.designer.cs">
+      <DependentUpon>Maintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\ChannelMessages\ChannelMessageDetails.aspx.cs">
+      <DependentUpon>ChannelMessageDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\ChannelMessages\ChannelMessageDetails.aspx.designer.cs">
+      <DependentUpon>ChannelMessageDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\ChannelMessages\ChannelMessageList.aspx.cs">
+      <DependentUpon>ChannelMessageList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\ChannelMessages\ChannelMessageList.aspx.designer.cs">
+      <DependentUpon>ChannelMessageList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\ChannelMessages\ChannelMessageReport.aspx.cs">
+      <DependentUpon>ChannelMessageReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\ChannelMessages\ChannelMessageReport.aspx.designer.cs">
+      <DependentUpon>ChannelMessageReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\ChannelSubscribers\ChannelSubscriberStatistics.aspx.cs">
+      <DependentUpon>ChannelSubscriberStatistics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\ChannelSubscribers\ChannelSubscriberStatistics.aspx.designer.cs">
+      <DependentUpon>ChannelSubscriberStatistics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\ChannelSubscribers\DownloadSubsciber.aspx.cs">
+      <DependentUpon>DownloadSubsciber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\ChannelSubscribers\DownloadSubsciber.aspx.designer.cs">
+      <DependentUpon>DownloadSubsciber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\ChannelSubscribers\RevenueReporting.aspx.cs">
+      <DependentUpon>RevenueReporting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\ChannelSubscribers\RevenueReporting.aspx.designer.cs">
+      <DependentUpon>RevenueReporting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\Channels\CelebrityPriceManagement.aspx.cs">
+      <DependentUpon>CelebrityPriceManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\Channels\CelebrityPriceManagement.aspx.designer.cs">
+      <DependentUpon>CelebrityPriceManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\Channels\ChannelDetailsEdit.aspx.cs">
+      <DependentUpon>ChannelDetailsEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\Channels\ChannelDetailsEdit.aspx.designer.cs">
+      <DependentUpon>ChannelDetailsEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\Channels\ChannelDetailsView.aspx.cs">
+      <DependentUpon>ChannelDetailsView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\Channels\ChannelDetailsView.aspx.designer.cs">
+      <DependentUpon>ChannelDetailsView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\Channels\ChannelList.aspx.cs">
+      <DependentUpon>ChannelList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\Channels\ChannelList.aspx.designer.cs">
+      <DependentUpon>ChannelList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\GetChannelMedia.aspx.cs">
+      <DependentUpon>GetChannelMedia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\GetChannelMedia.aspx.designer.cs">
+      <DependentUpon>GetChannelMedia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\Groups\GroupDetails.aspx.cs">
+      <DependentUpon>GroupDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\Groups\GroupDetails.aspx.designer.cs">
+      <DependentUpon>GroupDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\Groups\GroupList.aspx.cs">
+      <DependentUpon>GroupList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\Groups\GroupList.aspx.designer.cs">
+      <DependentUpon>GroupList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\MMSChannelMediaURL.aspx.cs">
+      <DependentUpon>MMSChannelMediaURL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\MMSChannelMediaURL.aspx.designer.cs">
+      <DependentUpon>MMSChannelMediaURL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\ShoppingCarts\checkout.aspx.cs">
+      <DependentUpon>checkout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\ShoppingCarts\checkout.aspx.designer.cs">
+      <DependentUpon>checkout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\ShoppingCarts\CheckoutCancel.aspx.cs">
+      <DependentUpon>CheckoutCancel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\ShoppingCarts\CheckoutCancel.aspx.designer.cs">
+      <DependentUpon>CheckoutCancel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\ShoppingCarts\CheckoutCancelMobile.aspx.cs">
+      <DependentUpon>CheckoutCancelMobile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\ShoppingCarts\CheckoutCancelMobile.aspx.designer.cs">
+      <DependentUpon>CheckoutCancelMobile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\ShoppingCarts\CheckoutComplete.aspx.cs">
+      <DependentUpon>CheckoutComplete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\ShoppingCarts\CheckoutComplete.aspx.designer.cs">
+      <DependentUpon>CheckoutComplete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\ShoppingCarts\CheckoutCompleteMobile.aspx.cs">
+      <DependentUpon>CheckoutCompleteMobile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\ShoppingCarts\CheckoutCompleteMobile.aspx.designer.cs">
+      <DependentUpon>CheckoutCompleteMobile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\ShoppingCarts\CheckoutIPNHandler.aspx.cs">
+      <DependentUpon>CheckoutIPNHandler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\ShoppingCarts\CheckoutIPNHandler.aspx.designer.cs">
+      <DependentUpon>CheckoutIPNHandler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\ShoppingCarts\CheckoutStart.aspx.cs">
+      <DependentUpon>CheckoutStart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\ShoppingCarts\CheckoutStart.aspx.designer.cs">
+      <DependentUpon>CheckoutStart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\ShoppingCarts\ShoppingCartList.aspx.cs">
+      <DependentUpon>ShoppingCartList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\ShoppingCarts\ShoppingCartList.aspx.designer.cs">
+      <DependentUpon>ShoppingCartList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\Users\UserDetails.aspx.cs">
+      <DependentUpon>UserDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\Users\UserDetails.aspx.designer.cs">
+      <DependentUpon>UserDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\Users\UserList.aspx.cs">
+      <DependentUpon>UserList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\Users\UserList.aspx.designer.cs">
+      <DependentUpon>UserList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\Users\UserPasswordReset.aspx.cs">
+      <DependentUpon>UserPasswordReset.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\Users\UserPasswordReset.aspx.designer.cs">
+      <DependentUpon>UserPasswordReset.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\ViewChannelMediaURL.aspx.cs">
+      <DependentUpon>ViewChannelMediaURL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\ViewChannelMediaURL.aspx.designer.cs">
+      <DependentUpon>ViewChannelMediaURL.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Prvii.Business\Prvii.Business.csproj">
+      <Project>{95b28602-a72c-4267-b980-daf17ad6267b}</Project>
+      <Name>Prvii.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Prvii.Entities\Prvii.Entities.csproj">
+      <Project>{3d262371-b8fb-47ee-a45c-6b6ff2685fd3}</Project>
+      <Name>Prvii.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Prvii.ExceptionHandling\Prvii.ExceptionHandling.csproj">
+      <Project>{f194260d-8a7d-4a9d-83ba-9f9ea0019c6a}</Project>
+      <Name>Prvii.ExceptionHandling</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WebPages\ChannelSubscribers\CelebrityRevenue.rdlc" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>64254</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:64254/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

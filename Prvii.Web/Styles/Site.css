@@ -1,0 +1,254 @@
+﻿body {
+ margin-left:0px;
+ margin-top:0px;
+ margin-right:0px;
+ font-family: Helvetica Neue,Helvetica,Arial,sans-serif;font-size: 14px;
+ overflow-y: scroll;
+}
+
+a{
+    color:blue;
+}
+
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #dbd7d7;
+}
+
+.footer_style{
+    color:#333333;
+    font-size:12px;
+}
+
+ /*----- top menu----*/
+.header_table{
+	height:60px;
+	width:100%;
+	/*background:url(../Images/menu_bg.png) 0 bottom repeat-x;*/
+    background-color:#222222;
+    border-collapse:collapse;
+    border-spacing: 0px;
+}
+
+.main_menu{
+    width: 100%;
+    background-color: #222222;
+    color: #17AAFF;
+    text-align: center;
+    height: 58px;
+    line-height: 58px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.main_menu ul li ul
+{
+    display: none;
+}
+
+.main_menu ul li 
+{
+    position: relative; 
+    float: left;
+    list-style: none;
+}
+
+.main_menu:hover {
+    background-color: #17AAFF;
+    color:white;
+}
+.level_menu{
+    width: 100%;
+    background-color: #222222;
+    color: #17AAFF;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.level_menu:hover {
+    background-color: #17AAFF;
+    color:white;
+}
+
+.login_info{
+    color: white;
+    font-size:13px;
+}
+
+.body_table{
+    width:84%;margin-left:8%;margin-right:8%
+}
+
+.body_table_content{
+   border-spacing: 5px;
+}
+
+.body_table_content td{
+   padding: 5px;
+}
+
+.form-control:-moz-placeholder {
+  color: #999999;
+}
+
+.form-control::-moz-placeholder {
+  color: #999999;
+}
+
+.form-control:-ms-input-placeholder {
+  color: #999999;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #999999;
+}
+
+.form-control {
+  width: 100%;
+  height: 35px;
+  padding: 6px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #555555;
+  vertical-align: middle;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+          transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+          box-sizing: border-box;
+     -webkit-box-sizing:border-box;
+     -moz-box-sizing: border-box;
+}
+
+.form-control:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control {
+  cursor: not-allowed;
+  background-color: #eeeeee;
+}
+
+textarea.form-control {
+  height: auto;
+}
+
+
+.btnStyle {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+.btn-primary {
+  color: #ffffff;
+  background-color: #1998F8;
+  border-color: #1998F8;
+  font-size: 12px;
+  font-weight:bold;
+  line-height: 1.33;
+  border-radius: 6px;
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  white-space: normal;
+}
+
+.grid
+{
+    color:black;
+    font-family:Tahoma; 
+    margin-left: auto;
+    margin-right: auto;
+    background-color:White;
+    border-width:1px;
+    border-style:None;
+}        
+.grid TH
+{
+    font-size:12px;
+    font-weight:bold;
+    letter-spacing:0px;
+    text-align:left;
+    padding:2px 4px;
+    color:black;
+    border-bottom:solid 2px #bbd9ee;
+    border-top:0px;
+}
+.grid TH A
+{ 
+    text-decoration:none;
+    padding-right:5px; 
+    color:black;
+}
+
+.grid .row TD
+{
+    font-size:11px;
+    text-align:left;
+    padding:6px 4px;
+    border-bottom:solid 1px #bbd9ee;
+}      
+
+/*.grid .row:hover
+{
+    background-color:#fffacd;
+    color:#000;
+}*/
+
+.error-message{
+    color:red;
+    font-weight:bold;
+    margin-left:8%;
+    margin-top:0px;
+    padding-top:0px;
+clear: both; 
+display: inline-block; 
+line-height:9px;
+}
+
+.requiredField{
+    color:red;
+}
+
+.progressBackground {
+    position: fixed;
+    background-color: black;
+    opacity: 0.5;
+    overflow: hidden;
+    text-align: center;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.progressBox {
+    background-color: white;
+    border-radius: 10px;
+    position: fixed;
+    text-align: center;
+    vertical-align: middle;
+    width: 280px;
+    height: 50px;
+    top: 45%;
+    left: 40%;
+    padding-top: 15px;
+}

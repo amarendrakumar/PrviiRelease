@@ -1,0 +1,583 @@
+﻿
+/* Styling for the ngProgress itself */
+#ngProgress {
+    margin: 0;
+    padding: 0;
+    z-index: 99998;
+    background-color: green;
+    color: green;
+    box-shadow: 0 0 10px 0; /* Inherits the font color */
+    height: 2px;
+    opacity: 0;
+
+    /* Add CSS3 styles for transition smoothing */
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Styling for the ngProgress-container */
+#ngProgress-container {
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99999;
+}
+
+html, body
+{
+padding: 0;
+margin: 0;
+}
+html
+{
+height: 100%;
+}
+body{
+font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+font-size:10px;
+*line-height:1.42857143;
+color:#fff;
+background-color:#000;
+    min-height: 100%;
+position: relative;
+-webkit-text-size-adjust: none;
+}
+a {color: #fff;
+   cursor:pointer;
+}
+#logo
+{
+overflow: hidden;
+text-align:center;
+margin-top:5px;
+margin-bottom:0px;
+margin-left:10px;
+}
+
+h3{
+vertical-align: middle !important;
+text-align: center;
+font-family: 'Times New Roman', Times, serif, serif;
+font-weight: bold;
+}
+#logo a
+{		
+color: #fff;
+text-align:center;		
+cursor:pointer;	
+font-family: 'Script MT Bold';
+font-style:italic;
+font-size: 20px;
+}
+#logo a h1
+{		
+color: #fff;
+text-align:center;		
+cursor:pointer;	
+font-family:sa;
+font-style:italic;
+font-size: 20px;
+}
+#logo a img
+{
+border:none;
+cursor:pointer;
+}
+.samp {
+    color:#a84eab!important;
+    text-align:center!important;
+    font-size: 11px;
+    
+}
+
+#DivToolTipContent {
+    position: absolute;
+right: 4px;
+top: 47px;
+/* width: 100px; */
+z-index: 9999;
+}
+.view-tooltip {
+    background: none repeat scroll 0 0 #ffffff;
+    border: 1px solid #84d4fa;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px #ccc;
+    float: right;
+    height: auto;
+    margin: 0px 0 0 2px;
+    padding: 6px;
+    position: relative;
+    width: 60px;
+    z-index: 99999;
+    color:#000!important;
+}
+ul.tooltip_list {
+    list-style-type: none;
+    margin:0px;
+    padding:0px;
+
+}
+ul.tooltip_list li a{
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size:11px;
+   color:#000!important;
+}
+.menuSide {
+background-color:#eee;
+
+
+
+}
+.menu {
+float: right;
+margin-top: -50px;
+margin-right: 10px;
+}
+.menu a{
+    border:none;
+cursor:pointer;
+}
+.menu a img
+{
+border:none;
+cursor:pointer;
+}
+input[type=text]{
+width:94%;
+padding:5px 5px 5px 5px;
+margin:5px 5px 2px 5px;
+  height:16px;
+   
+}
+.tblsearch
+{
+width:60px;
+padding:5px 5px 5px 5px;
+margin:5px 5px 2px 5px;
+height:16px;
+}
+
+input[type=email]{
+width:94%;
+padding:5px 5px 5px 5px;
+margin:5px 5px 2px 5px;
+  height:16px;
+   
+}
+
+input[type=url]{
+width:94%;
+padding:5px 5px 5px 5px;
+margin:5px 5px 2px 5px;
+  height:16px;
+   
+}
+.select {
+    width:94%;
+padding:5px 5px 5px 5px;
+margin:5px 5px 2px 5px;
+ 
+}
+.btnsaveNew{
+padding:5px 5px 5px 5px;
+margin:5px 5px 2px 5px;
+    height:25px;
+    color:#FFF!important;
+    background-color:#3D3D3D;
+    width:initial;
+}
+
+.btnsave{
+padding:5px 5px 5px 5px;
+margin:5px 5px 2px 5px;
+    height:25px;
+    color:#FFF!important;
+    background-color:#3D3D3D;
+    width:29%;
+}
+input[type=button1]{
+width:94%;
+padding:5px 5px 5px 5px;
+margin:5px 5px 2px 5px;
+    height:40px;
+}
+input[type=password]{
+width:94%;
+padding:5px 5px 5px 5px;
+margin:5px 5px 2px 5px;
+    height:16px;
+}
+
+select{
+padding:5px 5px 5px 5px;
+margin:5px 5px 2px 5px;
+
+}
+
+textarea{
+width:94%;
+padding:5px 5px 5px 5px;
+margin:5px 5px 2px 5px;  
+}
+
+button{
+width:98%;
+padding:5px 5px 5px 5px;
+margin:5px 5px 2px 3px;
+  height:40px;
+}
+#formLogin div {
+overflow: hidden;
+}
+#formLogin div h1 {
+font-size: 25px;
+height: 40px;
+vertical-align: middle !important;
+text-align: center;
+margin: 0px 0px 0px 0px;
+padding: 10px 0px 0px 0px;
+color: #ffffff !important;
+font-family: 'Times New Roman', Times, serif, serif;
+font-weight: bold;
+}
+
+#formLogin div span{    
+margin-left:10px;
+color:#fb0404!important;
+}
+.linkBlank {
+overflow: hidden;
+font-size: 11px;
+vertical-align: middle !important;
+*border-bottom: 2px solid #d8c9c9;
+border-top: 2px solid #d8c9c9;
+text-align: center;
+margin: 0px 0px 0px 0px;
+padding: 10px 0px 0px 0px;
+color: #ffffff !important;
+font-family: 'Times New Roman', Times, serif, serif;
+font-weight: bold;
+}
+
+.linksub {
+overflow: hidden;
+font-size: 11px;
+height: 24px;
+vertical-align: middle !important;
+*border-bottom: 2px solid #d8c9c9;
+border-top: 2px solid #d8c9c9;
+text-align: center;
+margin: 0px 0px 0px 0px;
+padding: 10px 0px 0px 0px;
+color: #ffffff !important;
+font-family: 'Times New Roman', Times, serif, serif;
+font-weight: bold;
+background-color:#a349a4!important;
+cursor:pointer;
+}
+ .linksub a {
+color: #ffffff !important;
+text-decoration: none;
+vertical-align: middle !important;
+cursor:pointer;
+}
+ .linksubsub{
+overflow: hidden;
+font-size: 11px;
+height: 24px;
+vertical-align: middle !important;
+*border-bottom: 2px solid #d8c9c9;
+border-top: 2px solid #d8c9c9;
+text-align: center;
+margin: 0px 0px 0px 0px;
+padding: 10px 0px 0px 0px;
+color: #ffffff !important;
+font-family: 'Times New Roman', Times, serif, serif;
+font-weight: bold;
+background-color:#00a2e8!important;
+cursor:pointer;
+}
+
+ .linksubsub a{
+color: #ffffff !important;
+text-decoration: none;
+vertical-align: middle !important;
+cursor:pointer;
+}
+
+.link {
+overflow: hidden;
+font-size: 11px;
+height: 24px;
+vertical-align: middle !important;
+*border-bottom: 2px solid #d8c9c9;
+border-top: 2px solid #d8c9c9;
+text-align: center;
+margin: 0px 0px 0px 0px;
+padding: 10px 0px 0px 0px;
+color: #ffffff !important;
+font-family: 'Times New Roman', Times, serif, serif;
+font-weight: bold;
+}
+
+.linkHead
+{
+overflow: hidden;
+font-size: 11px;
+height: 20px;
+vertical-align: middle !important;
+*border-bottom: 2px solid #d8c9c9;
+border-top: 2px solid #d8c9c9;
+text-align: center;
+margin: 0px 0px 0px 0px;
+padding: 7px 0px 0px 0px;
+color: #ffffff !important;
+font-family: 'Times New Roman', Times, serif, serif;
+font-weight: bold;
+}
+.link a {
+color: #ffffff !important;
+text-decoration: none;
+vertical-align: middle !important;
+cursor:pointer;
+}
+.link b {
+float:left;
+padding-left: 10px;
+vertical-align: middle !important;
+}
+.link b  a {
+color: #ffffff !important;
+text-decoration: none;
+vertical-align: middle !important;
+cursor:pointer;
+}
+.link b a img {
+margin: -13px 0px 0px -10px;
+width: auto;
+}
+.red {
+     color:#f70b0b!important;
+}
+
+table { 
+	width: 100%; 
+	border-collapse: collapse; 
+    background:#fff;
+    color:#000!important;
+   
+
+}
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+	background: #eee; 
+}
+th { 
+	background: #333; 
+	color: white; 
+	font-weight: bold; 
+    height:35px;
+}
+th a{ 
+	color: #fff!important; 
+    cursor:pointer;
+     text-decoration:none;
+}
+tr{
+     height:35px;
+}
+td, th { 
+	padding: 0px; 
+	border: 0.5px solid #ccc; 
+	text-align: left; 
+   
+
+}
+td a{
+    color:#000!important;
+    text-decoration:none;
+    cursor:pointer;
+}
+/* Image */
+
+
+.CreateMessage {
+
+}
+.CreateMessage table { 
+	width: 100%; 
+	border-collapse: collapse; 
+    background:#fff;
+    color:#000!important;
+   
+
+}
+/* Zebra striping */
+.CreateMessage tr:nth-of-type(odd) { 
+	background: #eee; 
+}
+.CreateMessage th { 
+	background: #dcd7d7; 
+	color: #000; 
+	font-weight: bold; 
+    height:30px;
+}
+.CreateMessage tr{
+     height:30px;
+}
+.CreateMessage td, .CreateMessage th { 
+	padding: 0px; 
+	border: 0.5px solid #ccc; 
+	text-align: left; 
+   
+
+}
+.CreateMessage td a, .CreateMessage th a{
+    color:#000!important;
+    text-decoration:none;
+}
+
+.image
+{
+display: inline-block;
+outline: 0;
+}
+		
+.image img
+{
+display: block;
+width: 100px;
+border-radius: 0px;
+}
+
+.image.fit
+{
+display: block;
+width: 100%;
+}
+		
+.image.featured
+{
+display: block;
+width: 100%;
+margin: 0 0 2.5em 0;
+}
+		
+.image.left
+{
+float: left;
+margin: 0 2em 2em 0;
+}
+		
+.image.centered
+{
+display: block;
+margin: 0 0 2.5em 0;
+}
+
+.image.centered img
+{
+margin: 0 auto;
+width: auto;
+}
+
+
+.DivDetails {
+overflow: hidden;
+font-size: 11px;
+vertical-align: middle !important;
+*border-bottom: 2px solid #d8c9c9;
+border-top: 2px solid #d8c9c9;
+text-align: center;
+margin: 0px 0px 0px 0px;
+padding: 15px 0px 0px 0px;
+color: #ffffff !important;
+font-family: 'Times New Roman', Times, serif, serif;
+font-weight: bold;
+}
+
+.DivDetails a {
+color: #ffffff !important;
+text-decoration: none;
+vertical-align: middle !important;
+cursor:pointer;
+}
+
+
+.image100
+{
+*display: inline-block;
+outline: 0;
+}
+		
+.image100 img
+{
+display: block;
+width: 100%;
+border-radius: 0px;
+}
+
+.image100.fit
+{
+display: block;
+width: 100%;
+}
+		
+.image100.featured
+{
+display: block;
+width: 100%;
+margin: 0 0 2.5em 0;
+}
+		
+.image100.left
+{
+float: left;
+margin: 0 2em 2em 0;
+}
+		
+.image100.centered
+{
+display: block;
+margin: 0 0 2.5em 0;
+}
+
+.image100.centered img
+{
+margin: 0 auto;
+width: auto;
+}
+
+.slide {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.slide.ng-enter,
+.slide.ng-leave {
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.slide.ng-enter {
+    left: 100%;
+}
+.slide.ng-enter-active {
+    left: 0;
+}
+.slide.ng-leave {
+    left: 0;
+}
+.slide.ng-leave-active {
+    left: -100%;
+}
+
+.errorMsg{color:#fb0404!important;}

@@ -1,0 +1,24 @@
+﻿<!--<div ng-include="'partials/header.html'"></div>-->
+<div ng-controller="channelSubscriberAllMessageListController" >
+    <div class="row">
+        <div class="" style="padding:0 2px;">
+            <table class="table-responsive">
+                <tr>
+                    <th><a href="" ng-click="predicate = 'SentOn'; reverse=!reverse"> Date</a></th>
+                    <th><a href="" ng-click="predicate = 'TimeZoneID'; reverse=!reverse"> TimeZoneID</a></th>
+                    <th><a href="" ng-click="predicate = 'Subject'; reverse=!reverse">Subject</a></th>
+                    <th></th>
+                </tr>
+                <tr ng-repeat="channelMessage in channelSubscriberAllMessageList |orderBy: predicate:reverse">
+                    <td>{{channelMessage.SentOn | date: 'YYYY-MM-dd : h:mm:ss a' }}</td>
+                    <td>{{channelMessage.TimeZoneID}}</td>
+                    <td>{{channelMessage.Subject}}</td>
+                    <td>
+                        <a ng-click="includeSubscriberMessageDetailsViewAll('subscriberMessageView.html',channelMessage.ID)">View</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+</div>

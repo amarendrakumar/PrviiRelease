@@ -1,0 +1,13 @@
+﻿<div ng-controller="subscriberChannelDetailsController">
+      <div class="col-md-12" style="margin: -5px!important;">
+        <br />
+        <img ng-src="{{SERVICE_URL}}channel/GetMedia?channelID={{channelDetails.ID}}&mediaTypeID=2" style="width:100%;" />
+        <br />
+        <img ng-src="{{SERVICE_URL}}channel/GetMedia?channelID={{channelDetails.ID}}&mediaTypeID=5" style="width:100%;" />
+        <br />
+        <img ng-src="{{SERVICE_URL}}channel/GetMedia?channelID={{channelDetails.ID}}&mediaTypeID=4" style="width:100%;" />
+        <br /><br />
+        <button type="button" class="btn btn-default" style="width:100px;" ng-click="includeChannel('newChannelsList.html',false)">Back</button>
+        <br />
+    </div>
+</div> 

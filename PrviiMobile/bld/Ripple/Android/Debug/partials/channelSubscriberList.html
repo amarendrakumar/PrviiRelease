@@ -1,0 +1,62 @@
+﻿<div ng-controller="channelSubscriberListController" class="row">
+    <div class="" style="padding:0 2px;">
+        <table class="table-responsive">
+            <tr>
+                <td>
+                    Search:
+                </td>
+            </tr>
+            <tr>
+                <!--<td>
+                    Email
+                </td>-->
+                <td>
+                    FirstName
+                </td>
+                <td>
+                    LastName
+                </td>
+                <td>
+                    Mobile
+                </td>
+            </tr>
+            <tr>
+                <!--<td>
+                    <input ng-model="searchText.Email" class="tblsearch">
+                </td>-->
+                <td>
+                    <input ng-model="searchText.Firstname" class="tblsearch">
+                </td>
+                <td>
+                    <input ng-model="searchText.Lastname" class="tblsearch">
+                </td>
+                <td>
+                    <input ng-model="searchText.Mobile" class="tblsearch">
+                </td>
+            </tr>
+        </table>
+        <table class="table-responsive">
+            <tr>
+                <!--<th><a href="" ng-click="predicate = 'Email'; reverse=!reverse">Email</a></th>-->
+                <th><a href="" ng-click="predicate = 'FirstName'; reverse=!reverse">FirstName</a></th>
+                <th><a href="" ng-click="predicate = 'LastName'; reverse=!reverse">LastName</a></th>
+                <th><a href="" ng-click="predicate = 'Mobile'; reverse=!reverse">Mobile</a></th>
+                <th></th>
+            </tr>
+            <tr ng-repeat="subscriber in SubscriberList | filter : searchText |orderBy: predicate : reverse">
+                <!--<td>{{subscriber.Email}}</td>-->
+                <td>{{subscriber.Firstname}}</td>
+                <td>{{subscriber.Lastname}}</td>
+                <td>
+                    {{subscriber.Mobile}}
+                </td>
+
+                <td>
+                    <a ng-click="IncludeChannelSubcriber('channelSubscriberDetails.html',subscriber.ID)">View</a>
+                    <div> </div>
+                </td>
+
+            </tr>
+        </table>
+    </div>
+</div>

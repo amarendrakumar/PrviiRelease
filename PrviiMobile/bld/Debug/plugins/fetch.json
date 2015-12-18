@@ -1,0 +1,38 @@
+{
+    "org.apache.cordova.console": {
+        "source": {
+            "type": "local",
+            "path": "D:\\PrviiCelebrityServices\\PrviiRelease\\PrviiMobile\\plugins\\org.apache.cordova.console"
+        }
+    },
+    "org.apache.cordova.device": {
+        "source": {
+            "type": "local",
+            "path": "D:\\PrviiCelebrityServices\\PrviiRelease\\PrviiMobile\\plugins\\org.apache.cordova.device"
+        }
+    },
+    "org.apache.cordova.inappbrowser": {
+        "source": {
+            "type": "local",
+            "path": "D:\\PrviiCelebrityServices\\PrviiRelease\\PrviiMobile\\plugins\\org.apache.cordova.inappbrowser"
+        }
+    },
+    "org.apache.cordova.media": {
+        "source": {
+            "type": "local",
+            "path": "D:\\PrviiCelebrityServices\\PrviiRelease\\PrviiMobile\\plugins\\org.apache.cordova.media"
+        }
+    },
+    "org.apache.cordova.file": {
+        "source": {
+            "type": "registry",
+            "id": "org.apache.cordova.file"
+        }
+    },
+    "org.apache.cordova.network-information": {
+        "source": {
+            "type": "local",
+            "path": "D:\\PrviiCelebrityServices\\PrviiRelease\\PrviiMobile\\plugins\\org.apache.cordova.network-information"
+        }
+    }
+}

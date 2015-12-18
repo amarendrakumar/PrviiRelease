@@ -1,0 +1,28 @@
+﻿<div ng-controller="channelSubscriberStatisticsController">
+    <table>
+        <tr><td><b> Active Subscribers :</b> {{ActiveSubscribers}} </td></tr>
+        <tr><td></td></tr>
+        <tr>
+            <td>
+                <table>
+                    <tr>
+                        <td>Total Subscribers</td>
+                        <td>
+                            <select ng-model="Sreport" ng-options="report.name for report in Reports" ng-change="changeReportType();"></select>
+                        </td>
+                        <td><select ng-model="Speriod" ng-options="period.name for period in Periods" ng-change="changeperiod();"></select></td>
+                        <td>
+                            <select ng-model="sweek" ng-options="week.name for week in Weeks" ng-show="IsWeek" ng-change="changeWeek();"></select>
+                            <select ng-model="smonth" ng-options="month.name for month in Months" ng-show="IsMonth" ng-change="changeMonth();"></select>
+                            <select ng-model="squarter" ng-show="IsQuarter" ng-options="quarter.name for quarter in Quarters" ng-change="changeQuarter();"></select>
+                            <select ng-model="syear" ng-show="IsYear" ng-options="year.name for year in Years" ng-change="changeYear();"></select>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr><td>{{CelebritySubscriberActivity}}</td></tr>
+
+    </table>
+
+</div>
